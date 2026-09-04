@@ -1,0 +1,203 @@
+{
+  "n_checks": 39,
+  "n_passed": 39,
+  "n_failed": 0,
+  "all_passed": true,
+  "checks": [
+    {
+      "check": "Fisher z round-trip",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "artanh(0.5) = 0.5493061443",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "tau=0 -> r=0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "tau=1 -> r=1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p-recovery round-trip r=0.45, n=26",
+      "passed": true,
+      "detail": "recovered 0.4500000000"
+    },
+    {
+      "check": "p-recovery round-trip r=0.07, n=32",
+      "passed": true,
+      "detail": "recovered 0.0700000000"
+    },
+    {
+      "check": "p-recovery round-trip r=0.32, n=66",
+      "passed": true,
+      "detail": "recovered 0.3200000000"
+    },
+    {
+      "check": "p-recovery round-trip r=0.19, n=189",
+      "passed": true,
+      "detail": "recovered 0.1900000000"
+    },
+    {
+      "check": "FE pooled = inverse-variance mean",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "FE se = 1/sqrt(sum(1/v))",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "tau2 = 0 for identical effects",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "I2 in [0,100]",
+      "passed": true,
+      "detail": "I2=0.00"
+    },
+    {
+      "check": "rho=1 aggregation has larger variance than rho=0",
+      "passed": true,
+      "detail": "v(rho=1)=0.04429 > v(rho=0)=0.01125"
+    },
+    {
+      "check": "aggregation mean is the arithmetic mean",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "single-effect aggregation is identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "permutation exact enumeration for k=4",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "trim-and-fill detects an asymmetric funnel",
+      "passed": true,
+      "detail": "imputed 5, adjusted r 0.103 (unadjusted 0.139)"
+    },
+    {
+      "check": "trim-and-fill imputes nothing for a symmetric funnel",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "trim-and-fill is sign-symmetric",
+      "passed": true,
+      "detail": "side=right"
+    },
+    {
+      "check": "trim-and-fill shrinks an inflated estimate toward zero",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Egger flags the asymmetric funnel",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Egger does not flag the symmetric funnel",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "TOST rejects a wide bound for a precise zero",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "TOST does not reject a narrow bound when imprecise",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "REML point estimates match PyMARE (all strata)",
+      "passed": true,
+      "detail": "max |diff| = 4.44e-09; SWS_stage: ours 0.02588 vs PyMARE 0.02588, SWS_spectral: ours 0.11269 vs PyMARE 0.11269, TST: ours 0.16463 vs PyMARE 0.16463, SE: ours 0.09069 vs PyMARE 0.09069"
+    },
+    {
+      "check": "all usable rows have finite z",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "all usable rows have positive v",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "no |r| >= 1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "direct_r rows are unchanged",
+      "passed": true,
+      "detail": "29 rows"
+    },
+    {
+      "check": "v = 1/(n-3) for every usable row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "imputed nulls have z = 0",
+      "passed": true,
+      "detail": "7 rows"
+    },
+    {
+      "check": "conversion preserves sign",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Winer2020 spectral r = 0.52 preserved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Winer2020 N3 stage r = 0.07 preserved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Kendall tau 0.30 -> r 0.4540",
+      "passed": true,
+      "detail": "r=0.4540"
+    },
+    {
+      "check": "every unusable row has a reason",
+      "passed": true,
+      "detail": "0 unexplained"
+    },
+    {
+      "check": "40 usable amyloid-PET effects",
+      "passed": true,
+      "detail": "found 40"
+    },
+    {
+      "check": "12 cohort families in the full dataset",
+      "passed": true,
+      "detail": "found 12"
+    },
+    {
+      "check": "all result files bit-identical on re-run",
+      "passed": true,
+      "detail": "8 files identical"
+    }
+  ]
+}

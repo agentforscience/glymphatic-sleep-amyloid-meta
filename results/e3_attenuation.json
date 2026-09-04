@@ -1,0 +1,489 @@
+{
+  "experiment": "E3 - measurement-reliability null model (competing explanation)",
+  "reliability_source": "Sleep-EDF Expanded, 75 subjects x 2 consecutive nights; single-night ICC(2,1) per metric",
+  "iccs": {
+    "SWS_stage": {
+      "metric": "noct_n3_pct_tst",
+      "icc": 0.7747,
+      "icc_ci": [
+        0.681262760597016,
+        0.8600234224517769
+      ],
+      "var_icc": 0.00201888226540269,
+      "attenuation_factor_sqrt_icc": 0.8801704380402696,
+      "n_subjects": 75
+    },
+    "TST": {
+      "metric": "noct_tst_min",
+      "icc": 0.2247,
+      "icc_ci": [
+        0.007432909693853747,
+        0.43771519739998205
+      ],
+      "var_icc": 0.012409530826888891,
+      "attenuation_factor_sqrt_icc": 0.4740253157796533,
+      "n_subjects": 75
+    },
+    "SE": {
+      "metric": "noct_sleep_eff_pct",
+      "icc": 0.5623,
+      "icc_ci": [
+        0.3825261622740859,
+        0.698816357527004
+      ],
+      "var_icc": 0.006526595230156801,
+      "attenuation_factor_sqrt_icc": 0.7498666548127073,
+      "n_subjects": 75
+    },
+    "WASO": {
+      "metric": "noct_waso_min",
+      "icc": 0.5172,
+      "icc_ci": [
+        0.3259184531091952,
+        0.6641612703538514
+      ],
+      "var_icc": 0.0075027362717016875,
+      "attenuation_factor_sqrt_icc": 0.7191661838546081,
+      "n_subjects": 75
+    }
+  },
+  "unmapped_domains": {
+    "SWS_spectral": "no reliability estimate derivable from hypnogram annotations (spectral power requires the raw EEG, which was not downloaded); not disattenuated"
+  },
+  "modality_caveat": "6 of 9 TST effects and 2 of 6 SE effects use self-report, whose test-retest reliability is NOT the single-night PSG ICC. The PSG-only arm below is the like-for-like comparison.",
+  "measurement_only_prediction": {
+    "SWS_stage_over_TST": {
+      "predicted_observed_ratio_if_true_effects_equal": 1.856800488793745,
+      "observed_r_SWS_stage": 0.025875076306362776,
+      "observed_r_comparator": 0.16316084857243623,
+      "observed_ratio": 0.1585863062907238,
+      "excess_over_measurement_prediction": 0.08540837168442801,
+      "verdict": "hypothesis requires observed ratio > 1.86; observed ratio is 0.16"
+    },
+    "SWS_stage_over_SE": {
+      "predicted_observed_ratio_if_true_effects_equal": 1.173769272698368,
+      "observed_r_SWS_stage": 0.025875076306362776,
+      "observed_r_comparator": 0.09044661965222045,
+      "observed_ratio": 0.2860811869570799,
+      "excess_over_measurement_prediction": 0.24372863867820493,
+      "verdict": "hypothesis requires observed ratio > 1.17; observed ratio is 0.29"
+    }
+  },
+  "disattenuated_pooled": {
+    "SWS_stage": {
+      "observed_r": 0.025875076306362776,
+      "disattenuated_r": 0.02938087798189091,
+      "disattenuated_ci_r": [
+        -0.1734578257858528,
+        0.22982835235426669
+      ],
+      "p": 0.6786720097256228,
+      "k": 4,
+      "icc_used": 0.7747,
+      "per_cohort": [
+        {
+          "cohort_family": "AgeWell_Caen",
+          "r_obs": 0.0,
+          "r_disattenuated": 0.0
+        },
+        {
+          "cohort_family": "BerkeleyAgingCohort",
+          "r_obs": 0.06999999999999998,
+          "r_disattenuated": 0.07953005119764922
+        },
+        {
+          "cohort_family": "MARS",
+          "r_obs": 0.038729042452100786,
+          "r_disattenuated": 0.04400175327216438
+        },
+        {
+          "cohort_family": "NYU_Barcelona",
+          "r_obs": 0.0,
+          "r_disattenuated": 0.0
+        }
+      ]
+    },
+    "TST": {
+      "observed_r": 0.16316084857243623,
+      "disattenuated_r": 0.22811055577946027,
+      "disattenuated_ci_r": [
+        -0.1094319220859634,
+        0.5184829569570549
+      ],
+      "p": 0.1414467865464425,
+      "k": 6,
+      "icc_used": 0.2247,
+      "per_cohort": [
+        {
+          "cohort_family": "A4",
+          "r_obs": 0.021131215558085947,
+          "r_disattenuated": 0.044578242669023646
+        },
+        {
+          "cohort_family": "AIBL",
+          "r_obs": 0.1966025311229542,
+          "r_disattenuated": 0.4147511210442255
+        },
+        {
+          "cohort_family": "AgeWell_Caen",
+          "r_obs": 0.25499999999999995,
+          "r_disattenuated": 0.5379459524869228
+        },
+        {
+          "cohort_family": "BLSA",
+          "r_obs": 0.3302091851328405,
+          "r_disattenuated": 0.6966066455537904
+        },
+        {
+          "cohort_family": "BerkeleyAgingCohort",
+          "r_obs": 0.36,
+          "r_disattenuated": 0.7594531093933029
+        },
+        {
+          "cohort_family": "MARS",
+          "r_obs": 0.0,
+          "r_disattenuated": 0.0
+        }
+      ]
+    },
+    "SE": {
+      "observed_r": 0.09044661965222045,
+      "disattenuated_r": 0.1092263177450767,
+      "disattenuated_ci_r": [
+        -0.14256811957189888,
+        0.34774271084470776
+      ],
+      "p": 0.2619148228864875,
+      "k": 4,
+      "icc_used": 0.5623,
+      "per_cohort": [
+        {
+          "cohort_family": "AIBL",
+          "r_obs": 0.11405845265130057,
+          "r_disattenuated": 0.15210498015782384
+        },
+        {
+          "cohort_family": "AgeWell_Caen",
+          "r_obs": 0.0,
+          "r_disattenuated": 0.0
+        },
+        {
+          "cohort_family": "BerkeleyAgingCohort",
+          "r_obs": 0.39073757788992786,
+          "r_disattenuated": 0.521076081170087
+        },
+        {
+          "cohort_family": "MARS",
+          "r_obs": 0.0,
+          "r_disattenuated": 0.0
+        }
+      ]
+    },
+    "WASO": {
+      "observed_r": 0.1090227898882035,
+      "disattenuated_r": 0.14352865902147807,
+      "disattenuated_ci_r": [
+        -0.9960034085980097,
+        0.9977561051510886
+      ],
+      "p": 0.6726804274204282,
+      "k": 2,
+      "icc_used": 0.5172,
+      "per_cohort": [
+        {
+          "cohort_family": "AgeWell_Caen",
+          "r_obs": -0.0447,
+          "r_disattenuated": -0.06215531403383794
+        },
+        {
+          "cohort_family": "BerkeleyAgingCohort",
+          "r_obs": 0.31,
+          "r_disattenuated": 0.4310547505702408
+        }
+      ]
+    }
+  },
+  "disattenuated_pooled_psg_only": {
+    "SWS_stage": {
+      "disattenuated_r": 0.02938087798189091,
+      "disattenuated_ci_r": [
+        -0.1734578257858528,
+        0.22982835235426669
+      ],
+      "p": 0.6786720097256228,
+      "k": 4
+    },
+    "TST": {
+      "disattenuated_r": 0.2719288565335436,
+      "disattenuated_ci_r": [
+        -0.7256006864645083,
+        0.9009541347117022
+      ],
+      "p": 0.422044058075531,
+      "k": 3
+    },
+    "SE": {
+      "disattenuated_r": 0.11574017022368589,
+      "disattenuated_ci_r": [
+        -0.528825548034005,
+        0.6756331895512994
+      ],
+      "p": 0.5514378199103118,
+      "k": 3
+    },
+    "WASO": {
+      "disattenuated_r": 0.14352865902147807,
+      "disattenuated_ci_r": [
+        -0.9960034085980097,
+        0.9977561051510886
+      ],
+      "p": 0.6726804274204282,
+      "k": 2
+    }
+  },
+  "observed_pooled_psg_only": {
+    "SWS_stage": {
+      "k_effects": 6,
+      "n_cohorts": 4,
+      "r": 0.025875076306362776,
+      "ci_r": [
+        -0.15293611370642934,
+        0.20304571827572865
+      ],
+      "p": 0.6784024527815408,
+      "I2": 0.0
+    },
+    "TST": {
+      "k_effects": 3,
+      "n_cohorts": 3,
+      "r": 0.1759133151045449,
+      "ci_r": [
+        -0.30389989464477185,
+        0.5845425634811099
+      ],
+      "p": 0.2599980382683957,
+      "I2": 60.992776270727475
+    },
+    "SE": {
+      "k_effects": 4,
+      "n_cohorts": 3,
+      "r": 0.10587994928037954,
+      "ci_r": [
+        -0.41590826172601,
+        0.5752209209688803
+      ],
+      "p": 0.4925179148579443,
+      "I2": 61.67076602571672
+    },
+    "SWS_spectral": {
+      "k_effects": 10,
+      "n_cohorts": 3,
+      "r": 0.11221775001720118,
+      "ci_r": [
+        -0.5353626088323248,
+        0.6767086573785538
+      ],
+      "p": 0.5653086196749967,
+      "I2": 76.71015278309949
+    }
+  },
+  "disattenuated_paired_contrasts": {
+    "SWS_stage_vs_TST_all_modalities": {
+      "n_shared_cohorts": 3,
+      "per_cohort": [
+        {
+          "cohort_family": "AgeWell_Caen",
+          "r_a_dis": 0.0,
+          "r_b_dis": 0.5379459524869228,
+          "diff_z": -0.6012605689118651
+        },
+        {
+          "cohort_family": "BerkeleyAgingCohort",
+          "r_a_dis": 0.07953005119764922,
+          "r_b_dis": 0.7594531093933029,
+          "diff_z": -0.915223265232812
+        },
+        {
+          "cohort_family": "MARS",
+          "r_a_dis": 0.04400175327216438,
+          "r_b_dis": 0.0,
+          "diff_z": 0.04403018436881062
+        }
+      ],
+      "pooled_difference": {
+        "k": 3,
+        "est": -0.28330119539525284,
+        "se": 0.2918538811619357,
+        "ci_low": -1.5390470938646308,
+        "ci_high": 0.972444703074125,
+        "tau2": 0.1302013991578838,
+        "Q": 4.00623594499706,
+        "Q_p": 0.13491396871027952,
+        "I2": 50.07782797971307,
+        "H2": 2.00311797249853,
+        "p": 0.43409544090380875,
+        "method": "REML+HKSJ",
+        "pi_low": -6.1801314038607575,
+        "pi_high": 5.613529013070252,
+        "r": -0.27595765103556413,
+        "r_ci_low": -0.9119601070148297,
+        "r_ci_high": 0.7497766270060748,
+        "r_pi_low": -0.9999914289465738,
+        "r_pi_high": 0.9999733820339473,
+        "n_total": null
+      },
+      "interpretation": "positive => N3 stage stronger than comparator AFTER correcting both for measurement unreliability"
+    },
+    "SWS_stage_vs_SE_all_modalities": {
+      "n_shared_cohorts": 3,
+      "per_cohort": [
+        {
+          "cohort_family": "AgeWell_Caen",
+          "r_a_dis": 0.0,
+          "r_b_dis": 0.0,
+          "diff_z": 0.0
+        },
+        {
+          "cohort_family": "BerkeleyAgingCohort",
+          "r_a_dis": 0.07953005119764922,
+          "r_b_dis": 0.521076081170087,
+          "diff_z": -0.49811741297282347
+        },
+        {
+          "cohort_family": "MARS",
+          "r_a_dis": 0.04400175327216438,
+          "r_b_dis": 0.0,
+          "diff_z": 0.04403018436881062
+        }
+      ],
+      "pooled_difference": {
+        "k": 3,
+        "est": -0.07932872149962697,
+        "se": 0.14787213853318307,
+        "ci_low": -0.7155711820133177,
+        "ci_high": 0.5569137390140637,
+        "tau2": 0.02640949958410995,
+        "Q": 4.283724193015199,
+        "Q_p": 0.11743596220133752,
+        "I2": 53.31165336785482,
+        "H2": 2.1418620965075994,
+        "p": 0.6453211952685969,
+        "method": "REML+HKSJ",
+        "pi_low": -2.871101054891584,
+        "pi_high": 2.71244361189233,
+        "r": -0.07916273288408934,
+        "r_ci_low": -0.6141584938253202,
+        "r_ci_high": 0.5056839657026961,
+        "r_pi_low": -0.9936051192552743,
+        "r_pi_high": 0.9912275217523554,
+        "n_total": null
+      },
+      "interpretation": "positive => N3 stage stronger than comparator AFTER correcting both for measurement unreliability"
+    },
+    "SWS_stage_vs_TST_PSG_only": {
+      "n_shared_cohorts": 3,
+      "per_cohort": [
+        {
+          "cohort_family": "AgeWell_Caen",
+          "r_a_dis": 0.0,
+          "r_b_dis": 0.5379459524869228,
+          "diff_z": -0.6012605689118651
+        },
+        {
+          "cohort_family": "BerkeleyAgingCohort",
+          "r_a_dis": 0.07953005119764922,
+          "r_b_dis": 0.7594531093933029,
+          "diff_z": -0.915223265232812
+        },
+        {
+          "cohort_family": "MARS",
+          "r_a_dis": 0.04400175327216438,
+          "r_b_dis": 0.0,
+          "diff_z": 0.04403018436881062
+        }
+      ],
+      "pooled_difference": {
+        "k": 3,
+        "est": -0.28330119539525284,
+        "se": 0.2918538811619357,
+        "ci_low": -1.5390470938646308,
+        "ci_high": 0.972444703074125,
+        "tau2": 0.1302013991578838,
+        "Q": 4.00623594499706,
+        "Q_p": 0.13491396871027952,
+        "I2": 50.07782797971307,
+        "H2": 2.00311797249853,
+        "p": 0.43409544090380875,
+        "method": "REML+HKSJ",
+        "pi_low": -6.1801314038607575,
+        "pi_high": 5.613529013070252,
+        "r": -0.27595765103556413,
+        "r_ci_low": -0.9119601070148297,
+        "r_ci_high": 0.7497766270060748,
+        "r_pi_low": -0.9999914289465738,
+        "r_pi_high": 0.9999733820339473,
+        "n_total": null
+      },
+      "interpretation": "positive => N3 stage stronger than comparator AFTER correcting both for measurement unreliability"
+    },
+    "SWS_stage_vs_SE_PSG_only": {
+      "n_shared_cohorts": 3,
+      "per_cohort": [
+        {
+          "cohort_family": "AgeWell_Caen",
+          "r_a_dis": 0.0,
+          "r_b_dis": 0.0,
+          "diff_z": 0.0
+        },
+        {
+          "cohort_family": "BerkeleyAgingCohort",
+          "r_a_dis": 0.07953005119764922,
+          "r_b_dis": 0.521076081170087,
+          "diff_z": -0.49811741297282347
+        },
+        {
+          "cohort_family": "MARS",
+          "r_a_dis": 0.04400175327216438,
+          "r_b_dis": 0.0,
+          "diff_z": 0.04403018436881062
+        }
+      ],
+      "pooled_difference": {
+        "k": 3,
+        "est": -0.07932872149962697,
+        "se": 0.14787213853318307,
+        "ci_low": -0.7155711820133177,
+        "ci_high": 0.5569137390140637,
+        "tau2": 0.02640949958410995,
+        "Q": 4.283724193015199,
+        "Q_p": 0.11743596220133752,
+        "I2": 53.31165336785482,
+        "H2": 2.1418620965075994,
+        "p": 0.6453211952685969,
+        "method": "REML+HKSJ",
+        "pi_low": -2.871101054891584,
+        "pi_high": 2.71244361189233,
+        "r": -0.07916273288408934,
+        "r_ci_low": -0.6141584938253202,
+        "r_ci_high": 0.5056839657026961,
+        "r_pi_low": -0.9936051192552743,
+        "r_pi_high": 0.9912275217523554,
+        "n_total": null
+      },
+      "interpretation": "positive => N3 stage stronger than comparator AFTER correcting both for measurement unreliability"
+    }
+  },
+  "sensitivity_self_report_reliability": {
+    "assumed_icc_self_report_TST": 0.75,
+    "rationale": "If self-reported habitual sleep duration is in fact a reliable trait measure (ICC ~ 0.75) rather than a noisy single-night one (0.225), TST's observed correlation needs far less upward correction, which makes the N3 gap even harder to explain by measurement error.",
+    "predicted_observed_ratio_if_true_effects_equal": 1.016333278670601,
+    "disattenuated_TST_r": 0.18511216315607254
+  },
+  "required_effect_for_parity": {
+    "disattenuated_TST_r": 0.22811055577946027,
+    "observed_r_N3_needed_for_equal_true_effect": 0.2007761678020169,
+    "observed_r_N3_actual": 0.025875076306362776,
+    "shortfall": 0.17490109149565414,
+    "note": "For N3 stage to have the same TRUE association with amyloid as TST, the OBSERVED single-night N3 correlation would have to be this large. It is not."
+  }
+}

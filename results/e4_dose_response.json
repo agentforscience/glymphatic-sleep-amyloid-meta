@@ -1,0 +1,294 @@
+{
+  "experiment": "E4 - dose-response conversion (hypothesis clause ii)",
+  "seed": 42,
+  "n_monte_carlo": 10000,
+  "conversion_formula": "Delta_amyloid per 10pp N3 = r_pooled * (10 / SD_N3%) * SD_amyloid",
+  "inputs": {
+    "n3_dispersion": {
+      "bands": {
+        "40-60": {
+          "n": 21,
+          "mean": 7.667142857142856,
+          "sd": 6.712603267628098,
+          "median": 6.02,
+          "pct_at_or_above_10pp": 33.33333333333333
+        },
+        "60-75": {
+          "n": 21,
+          "mean": 8.528,
+          "sd": 10.668231582600745,
+          "median": 5.128,
+          "pct_at_or_above_10pp": 28.57142857142857
+        },
+        "75-+": {
+          "n": 16,
+          "mean": 5.2330625,
+          "sd": 9.730162776773058,
+          "median": 1.592,
+          "pct_at_or_above_10pp": 12.5
+        }
+      },
+      "weights": {
+        "40-60": 0,
+        "60-75": 2,
+        "75-+": 2
+      },
+      "weighted_sd": 10.199197179686902,
+      "effective_n": 18
+    },
+    "study_mean_ages_by_cohort": {
+      "A4": 71.3,
+      "BLSA": 76.0,
+      "BerkeleyAgingCohort": 75.34,
+      "MayoMCSA": 72.9
+    },
+    "amyloid_scale_anchors": {
+      "source": "Jack 2017 (datasets/meta_analysis/amyloid_pet_reference_scale.csv)",
+      "A_negative_SUVR_median_IQR": [
+        1.31,
+        [
+          1.26,
+          1.35
+        ]
+      ],
+      "A_positive_SUVR_median_IQR": [
+        1.57,
+        [
+          1.47,
+          1.77
+        ]
+      ],
+      "A_negative_CL_median_IQR": [
+        9.0,
+        [
+          5.0,
+          12.0
+        ]
+      ],
+      "A_positive_CL_median_IQR": [
+        31.0,
+        [
+          23.0,
+          48.0
+        ]
+      ],
+      "A_positive_prevalence_prior": "Beta(30.0, 70.0) (mean 0.3)"
+    }
+  },
+  "derived_amyloid_dispersion": {
+    "SUVR_mixture_mean": 1.388,
+    "SUVR_mixture_sd": 0.17930006243749977,
+    "Centiloid_mixture_mean": 15.599999999999998,
+    "Centiloid_mixture_sd": 14.95063404900147,
+    "A_neg_to_A_pos_gap_SUVR": 0.26,
+    "A_neg_to_A_pos_gap_CL": 22.0,
+    "internal_consistency_check_CL_per_SUVR": 84.61538461538461
+  },
+  "dose_per_10pp_N3_equivalent": {
+    "SWS_stage": {
+      "pooled_r": 0.025875076306362776,
+      "k_cohorts": 4,
+      "delta_SUVR": {
+        "scale": "SUVR",
+        "delta_pp_N3": 10.0,
+        "point_estimate": 0.004716843458670158,
+        "mean": 0.004939805436762474,
+        "ci_95": [
+          -0.027671383730089066,
+          0.038187995712227904
+        ],
+        "ci_80": [
+          -0.012174640885029215,
+          0.021899891143864612
+        ],
+        "p_direction_positive": 0.6713,
+        "sd_amyloid_used_median": 0.17834978188107353,
+        "sd_n3_used_median": 9.96524781629466,
+        "n_mc": 10000
+      },
+      "delta_Centiloid": {
+        "scale": "Centiloid",
+        "delta_pp_N3": 10.0,
+        "point_estimate": 0.3774448631149104,
+        "mean": 0.37885792006960645,
+        "ci_95": [
+          -2.4221407223628915,
+          3.136743059300692
+        ],
+        "ci_80": [
+          -0.9923718258020969,
+          1.8088788055575786
+        ],
+        "p_direction_positive": 0.6606,
+        "sd_amyloid_used_median": 14.894622177383376,
+        "sd_n3_used_median": 10.035055035212995,
+        "n_mc": 10000
+      },
+      "pct_of_A_minus_to_A_plus_SUVR_gap": 1.814170561026984,
+      "pct_of_A_minus_to_A_plus_CL_gap": 1.715658468704138
+    },
+    "TST": {
+      "pooled_r": 0.16316084857243623,
+      "k_cohorts": 6,
+      "delta_SUVR": {
+        "scale": "SUVR",
+        "delta_pp_N3": 10.0,
+        "point_estimate": 0.029153290368184245,
+        "mean": 0.02985424757184407,
+        "ci_95": [
+          0.00039431615239576075,
+          0.06402502028686595
+        ],
+        "ci_80": [
+          0.01208064721421777,
+          0.048638616695687045
+        ],
+        "p_direction_positive": 0.9761,
+        "sd_amyloid_used_median": 0.17864661084950106,
+        "sd_n3_used_median": 10.033787878717838,
+        "n_mc": 10000
+      },
+      "delta_Centiloid": {
+        "scale": "Centiloid",
+        "delta_pp_N3": 10.0,
+        "point_estimate": 2.4061509763422735,
+        "mean": 2.484589912630382,
+        "ci_95": [
+          -0.049206952183281395,
+          5.354670094090199
+        ],
+        "ci_80": [
+          0.9909735253679643,
+          4.105039147569283
+        ],
+        "p_direction_positive": 0.9738,
+        "sd_amyloid_used_median": 14.909443973321817,
+        "sd_n3_used_median": 9.952496852857292,
+        "n_mc": 10000
+      },
+      "pct_of_A_minus_to_A_plus_SUVR_gap": 11.212803987763172,
+      "pct_of_A_minus_to_A_plus_CL_gap": 10.937049892464879,
+      "note": "expressed per 10 percentage points of N3 only to put all strata on one axis; for this exposure the natural unit differs"
+    },
+    "SE": {
+      "pooled_r": 0.09044661965222045,
+      "k_cohorts": 4,
+      "delta_SUVR": {
+        "scale": "SUVR",
+        "delta_pp_N3": 10.0,
+        "point_estimate": 0.016079552449460847,
+        "mean": 0.016582069869584517,
+        "ci_95": [
+          -0.023844835738918307,
+          0.05886006233092629
+        ],
+        "ci_80": [
+          -0.0038093617143409157,
+          0.03786489633203446
+        ],
+        "p_direction_positive": 0.8615,
+        "sd_amyloid_used_median": 0.17851479269660864,
+        "sd_n3_used_median": 9.979321222022495,
+        "n_mc": 10000
+      },
+      "delta_Centiloid": {
+        "scale": "Centiloid",
+        "delta_pp_N3": 10.0,
+        "point_estimate": 1.3282765889742987,
+        "mean": 1.3608621595390833,
+        "ci_95": [
+          -1.867557670644239,
+          4.805115370330161
+        ],
+        "ci_80": [
+          -0.3139604512781252,
+          3.1221702796300397
+        ],
+        "p_direction_positive": 0.8577,
+        "sd_amyloid_used_median": 14.882515758373156,
+        "sd_n3_used_median": 10.002475104485054,
+        "n_mc": 10000
+      },
+      "pct_of_A_minus_to_A_plus_SUVR_gap": 6.184443249792634,
+      "pct_of_A_minus_to_A_plus_CL_gap": 6.037620858974085,
+      "note": "expressed per 10 percentage points of N3 only to put all strata on one axis; for this exposure the natural unit differs"
+    },
+    "SWS_spectral": {
+      "pooled_r": 0.11221775001720118,
+      "k_cohorts": 3,
+      "delta_SUVR": {
+        "scale": "SUVR",
+        "delta_pp_N3": 10.0,
+        "point_estimate": 0.019893039485074995,
+        "mean": 0.019158849041911282,
+        "ci_95": [
+          -0.0972478934401513,
+          0.12366006224018006
+        ],
+        "ci_80": [
+          -0.03456227781163399,
+          0.07370195418961284
+        ],
+        "p_direction_positive": 0.7146,
+        "sd_amyloid_used_median": 0.17851175127784244,
+        "sd_n3_used_median": 10.00585920722187,
+        "n_mc": 10000
+      },
+      "delta_Centiloid": {
+        "scale": "Centiloid",
+        "delta_pp_N3": 10.0,
+        "point_estimate": 1.7050540548589024,
+        "mean": 1.6934152676780798,
+        "ci_95": [
+          -7.877366541335687,
+          10.761936756327918
+        ],
+        "ci_80": [
+          -2.8256937719593225,
+          6.320746581321042
+        ],
+        "p_direction_positive": 0.7264,
+        "sd_amyloid_used_median": 14.874787785944186,
+        "sd_n3_used_median": 9.992306963998393,
+        "n_mc": 10000
+      },
+      "pct_of_A_minus_to_A_plus_SUVR_gap": 7.6511690327211515,
+      "pct_of_A_minus_to_A_plus_CL_gap": 7.750245703904102,
+      "note": "expressed per 10 percentage points of N3 only to put all strata on one axis; for this exposure the natural unit differs"
+    }
+  },
+  "longitudinal_framing": {
+    "benchmark_accumulation": {
+      "mean_CL_per_year": 2.1,
+      "sd_CL_per_year": 5.3,
+      "n": 64,
+      "source": "Carvalho 2024, cognitively unimpaired Mayo MCSA, Table 1",
+      "A_positive_range_CL_per_year": "+3 to +11 (Hanseeuw 2021)"
+    },
+    "age_equivalence_anchor": {
+      "CL_per_year_per_extra_year_of_age": 0.24333333333333332,
+      "source": "Carvalho 2024: 1.46 CL/year effect described as equivalent to 6 additional years of baseline age"
+    },
+    "SWS_stage_delta_CL_per_year_per_10pp": {
+      "point_estimate": 0.3637541205095017,
+      "ci_from_r_ci": [
+        -1.484463353474287,
+        2.1238966580363483
+      ],
+      "equivalent_extra_years_of_age": 1.4948799472993222,
+      "k_cohorts": 1,
+      "caveat": "single cohort family contributes the longitudinal N3-stage effect"
+    }
+  },
+  "feasibility_of_the_stated_dose": {
+    "question": "Is a '10% reduction in N3 sleep percentage' attainable in the population the hypothesis is about?",
+    "n_subjects_age_60plus": 37,
+    "mean_N3_pct": 7.103162162162162,
+    "median_N3_pct": 1.885,
+    "sd_N3_pct": 10.267199798153106,
+    "pct_with_N3_at_least_10pp": 21.62162162162162,
+    "pct_with_N3_below_5pp": 59.45945945945946,
+    "interpretation": "Mean N3 is 7.1% of TST in adults aged 60+ and 78% of them already have less than 10 percentage points of N3 in total. An absolute 10-percentage-point reduction is therefore not available as an exposure contrast for most of the target population; the stated dose spans roughly the entire observable range rather than a small perturbation within it.",
+    "stated_dose_in_SD_units": 0.9804693275188727
+  }
+}

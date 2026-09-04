@@ -1,0 +1,1063 @@
+{
+  "experiment": "E5 - robustness, sensitivity and bias diagnostics",
+  "primary_for_reference": {
+    "SWS_stage": {
+      "r": 0.025875076306362776,
+      "ci": [
+        -0.15293611370642934,
+        0.20304571827572865
+      ],
+      "p": 0.6784024527815408
+    },
+    "SWS_spectral": {
+      "r": 0.11221775001720118,
+      "ci": [
+        -0.5353626088323248,
+        0.6767086573785538
+      ],
+      "p": 0.5653086196749967
+    },
+    "TST": {
+      "r": 0.16316084857243623,
+      "ci": [
+        -0.0023178434295020333,
+        0.319941930731874
+      ],
+      "p": 0.05221762309218052
+    },
+    "SE": {
+      "r": 0.09044661965222045,
+      "ci": [
+        -0.12978432220063582,
+        0.3021731672544891
+      ],
+      "p": 0.283042444250549
+    }
+  },
+  "S1_exclude_imputed_nulls": {
+    "rationale": "Imputing z=0 for reported nulls is conservative in magnitude but adds precision that the papers did not actually supply. Removing them tests whether the conclusions depend on the imputation.",
+    "results": {
+      "SWS_stage": {
+        "k_effects": 5,
+        "n_cohorts": 3,
+        "r": 0.02924217294464779,
+        "r_ci_low": -0.22555808945988587,
+        "r_ci_high": 0.28029804244718265,
+        "p": 0.6747706968717018,
+        "tau2": 0.0,
+        "I2": 0.0
+      },
+      "SWS_spectral": {
+        "k_effects": 8,
+        "n_cohorts": 2,
+        "r": 0.18795546828298898,
+        "r_ci_low": -0.9972422383702397,
+        "r_ci_high": 0.9987104587527036,
+        "p": 0.6137836907356466,
+        "tau2": 0.131498761610776,
+        "I2": 87.32026479586148
+      },
+      "TST": {
+        "k_effects": 7,
+        "n_cohorts": 5,
+        "r": 0.20018899075413107,
+        "r_ci_low": 0.012264856716310378,
+        "r_ci_high": 0.3744539111110391,
+        "p": 0.041759027136312785,
+        "tau2": 0.014596374579602691,
+        "I2": 77.7945491155242
+      },
+      "SE": {
+        "k_effects": 4,
+        "n_cohorts": 3,
+        "r": 0.19356834640077328,
+        "r_ci_low": -0.2673678069645424,
+        "r_ci_high": 0.5824154755618945,
+        "p": 0.21459970992920877,
+        "tau2": 0.018598946703808454,
+        "I2": 57.53554067518367
+      }
+    }
+  },
+  "S2_exclude_p_recovered_betas": {
+    "rationale": "Tests whether the t-statistic recovery of unstandardised regression coefficients drives any conclusion. This drops the two largest cohorts (A4, AIBL) from the TST stratum.",
+    "results": {
+      "SWS_stage": {
+        "k_effects": 4,
+        "n_cohorts": 3,
+        "r": 0.01301254834276512,
+        "r_ci_low": -0.31959766206239254,
+        "r_ci_high": 0.34276784330240195,
+        "p": 0.8857311544384474,
+        "tau2": 0.0,
+        "I2": 0.0
+      },
+      "SWS_spectral": {
+        "k_effects": 7,
+        "n_cohorts": 2,
+        "r": 0.21471479492499979,
+        "r_ci_low": -0.9926926865219449,
+        "r_ci_high": 0.9969395272732764,
+        "p": 0.5275586015525014,
+        "tau2": 0.0976970013583046,
+        "I2": 85.69404767010744
+      },
+      "TST": {
+        "k_effects": 5,
+        "n_cohorts": 5,
+        "r": 0.15062338161831473,
+        "r_ci_low": -0.07640987204292253,
+        "r_ci_high": 0.3628078170979857,
+        "p": 0.13870583656649152,
+        "tau2": 0.02253628400266928,
+        "I2": 74.13197655768914
+      },
+      "SE": {
+        "k_effects": 5,
+        "n_cohorts": 4,
+        "r": 0.03600921717211068,
+        "r_ci_low": -0.1761452622745557,
+        "r_ci_high": 0.24496688029872346,
+        "p": 0.6293556146171015,
+        "tau2": 0.0,
+        "I2": 46.75517294995957
+      }
+    }
+  },
+  "S1_and_S2_both_excluded": {
+    "rationale": "Most restrictive set: only effects reported natively as correlations.",
+    "results": {
+      "SWS_stage": {
+        "k_effects": 3,
+        "n_cohorts": 2,
+        "r": 0.016907539975655285,
+        "r_ci_low": -0.8150183065307962,
+        "r_ci_high": 0.8260639806147463,
+        "p": 0.8832814644433545,
+        "tau2": 0.0,
+        "I2": 0.0
+      },
+      "SWS_spectral": {
+        "k_effects": 5,
+        "n_cohorts": 1,
+        "r": 0.44424531028725733,
+        "r_ci_low": 0.15909121440537619,
+        "r_ci_high": 0.6609850903967592,
+        "p": 0.0031586490668498706,
+        "tau2": 0.0,
+        "I2": 0.0
+      },
+      "TST": {
+        "k_effects": 3,
+        "n_cohorts": 3,
+        "r": 0.29882877237279176,
+        "r_ci_low": -0.02672166088430188,
+        "r_ci_high": 0.567070452758252,
+        "p": 0.05827081374912294,
+        "tau2": 0.0,
+        "I2": 0.0
+      },
+      "SE": {
+        "k_effects": 3,
+        "n_cohorts": 2,
+        "r": 0.18727210836426944,
+        "r_ci_low": -0.984418403364241,
+        "r_ci_high": 0.9926683195904641,
+        "p": 0.5259868049897907,
+        "tau2": 0.06450593578886124,
+        "I2": 75.7571139394246
+      }
+    }
+  },
+  "S3_df_rule_for_p_recovery": {
+    "rationale": "The residual df used in the t-recovery is not always fully recoverable from the papers; this varies the rule across a plausible range.",
+    "results": {
+      "n_minus_1_minus_ncov": {
+        "SWS_stage": {
+          "k_effects": 6,
+          "n_cohorts": 4,
+          "r": 0.025875076306362793,
+          "r_ci_low": -0.15293611370642932,
+          "r_ci_high": 0.20304571827572868,
+          "p": 0.6784024527815404,
+          "tau2": 0.0,
+          "I2": 0.0
+        },
+        "SWS_spectral": {
+          "k_effects": 10,
+          "n_cohorts": 3,
+          "r": 0.11221775001720118,
+          "r_ci_low": -0.5353626088323248,
+          "r_ci_high": 0.6767086573785538,
+          "p": 0.5653086196749967,
+          "tau2": 0.06146463271616089,
+          "I2": 76.71015278309949
+        },
+        "TST": {
+          "k_effects": 9,
+          "n_cohorts": 6,
+          "r": 0.1631608485724363,
+          "r_ci_low": -0.002317843429501978,
+          "r_ci_high": 0.319941930731874,
+          "p": 0.05221762309218046,
+          "tau2": 0.016329820910225647,
+          "I2": 77.09566617980208
+        },
+        "SE": {
+          "k_effects": 6,
+          "n_cohorts": 4,
+          "r": 0.09044661965222048,
+          "r_ci_low": -0.12978432220063588,
+          "r_ci_high": 0.3021731672544892,
+          "p": 0.283042444250549,
+          "tau2": 0.00268610571673335,
+          "I2": 45.610684733977315
+        }
+      },
+      "n_minus_2": {
+        "SWS_stage": {
+          "k_effects": 6,
+          "n_cohorts": 4,
+          "r": 0.02532399938366991,
+          "r_ci_low": -0.15347460871064303,
+          "r_ci_high": 0.20251695526920024,
+          "p": 0.6846814240658177,
+          "tau2": 0.0,
+          "I2": 0.0
+        },
+        "SWS_spectral": {
+          "k_effects": 10,
+          "n_cohorts": 3,
+          "r": 0.11254741962072697,
+          "r_ci_low": -0.5343627466354706,
+          "r_ci_high": 0.6763112632147352,
+          "p": 0.563734300116185,
+          "tau2": 0.06122182378782284,
+          "I2": 76.64894811581446
+        },
+        "TST": {
+          "k_effects": 9,
+          "n_cohorts": 6,
+          "r": 0.16126398301320263,
+          "r_ci_low": -0.0024741437891854815,
+          "r_ci_high": 0.3165808039977569,
+          "p": 0.05239737735948899,
+          "tau2": 0.015839141790359352,
+          "I2": 76.61147045060837
+        },
+        "SE": {
+          "k_effects": 6,
+          "n_cohorts": 4,
+          "r": 0.0899020054818468,
+          "r_ci_low": -0.12921338315737435,
+          "r_ci_high": 0.3006468515720329,
+          "p": 0.2834143293985399,
+          "tau2": 0.002525801711667903,
+          "I2": 45.50337028463183
+        }
+      },
+      "n_minus_1_minus_2ncov": {
+        "SWS_stage": {
+          "k_effects": 6,
+          "n_cohorts": 4,
+          "r": 0.02656833357520665,
+          "r_ci_low": -0.15225853369983572,
+          "r_ci_high": 0.20371075780996803,
+          "p": 0.6705527140925429,
+          "tau2": 0.0,
+          "I2": 0.0
+        },
+        "SWS_spectral": {
+          "k_effects": 10,
+          "n_cohorts": 3,
+          "r": 0.11169057218568483,
+          "r_ci_low": -0.5369621724983463,
+          "r_ci_high": 0.6773462527134212,
+          "p": 0.5678270675460863,
+          "tau2": 0.06185515065356986,
+          "I2": 76.80822765034408
+        },
+        "TST": {
+          "k_effects": 9,
+          "n_cohorts": 6,
+          "r": 0.16583331012083743,
+          "r_ci_low": -0.0021254866032551735,
+          "r_ci_high": 0.3246924022731417,
+          "p": 0.0519983047114281,
+          "tau2": 0.017041338138791863,
+          "I2": 77.76262314745524
+        },
+        "SE": {
+          "k_effects": 6,
+          "n_cohorts": 4,
+          "r": 0.09118683354806077,
+          "r_ci_low": -0.1305156107544777,
+          "r_ci_high": 0.30420419653647346,
+          "p": 0.28246421132490723,
+          "tau2": 0.0029029658365140425,
+          "I2": 45.7605056951668
+        }
+      }
+    }
+  },
+  "S4_dependency_rho": {
+    "rationale": "rho is the assumed correlation between multiple effects from one cohort. rho=1 would mean they carry no extra information; rho=0 would treat them as independent.",
+    "results": {
+      "rho=0.3": {
+        "SWS_stage": {
+          "k_effects": 6,
+          "n_cohorts": 4,
+          "r": 0.025656031400865843,
+          "r_ci_low": -0.13896682486797865,
+          "r_ci_high": 0.18889904310908767,
+          "p": 0.655618428481049,
+          "tau2": 0.0,
+          "I2": 0.0
+        },
+        "SWS_spectral": {
+          "k_effects": 10,
+          "n_cohorts": 3,
+          "r": 0.12196371278815094,
+          "r_ci_low": -0.5386439928840239,
+          "r_ci_high": 0.689704122789949,
+          "p": 0.5424968002801868,
+          "tau2": 0.07151111102286607,
+          "I2": 84.54239307927412
+        },
+        "TST": {
+          "k_effects": 9,
+          "n_cohorts": 6,
+          "r": 0.16741670506144696,
+          "r_ci_low": 0.0001079590210634634,
+          "r_ci_high": 0.32560794100404633,
+          "p": 0.04990041329587052,
+          "tau2": 0.017320860875127898,
+          "I2": 80.20517220796536
+        },
+        "SE": {
+          "k_effects": 6,
+          "n_cohorts": 4,
+          "r": 0.10365147167922804,
+          "r_ci_low": -0.1511365377416167,
+          "r_ci_high": 0.34552536763901,
+          "p": 0.2870289977664069,
+          "tau2": 0.009207584017334569,
+          "I2": 53.0938889037543
+        }
+      },
+      "rho=0.6": {
+        "SWS_stage": {
+          "k_effects": 6,
+          "n_cohorts": 4,
+          "r": 0.025875076306362776,
+          "r_ci_low": -0.15293611370642934,
+          "r_ci_high": 0.20304571827572865,
+          "p": 0.6784024527815408,
+          "tau2": 0.0,
+          "I2": 0.0
+        },
+        "SWS_spectral": {
+          "k_effects": 10,
+          "n_cohorts": 3,
+          "r": 0.11221775001720118,
+          "r_ci_low": -0.5353626088323248,
+          "r_ci_high": 0.6767086573785538,
+          "p": 0.5653086196749967,
+          "tau2": 0.06146463271616089,
+          "I2": 76.71015278309949
+        },
+        "TST": {
+          "k_effects": 9,
+          "n_cohorts": 6,
+          "r": 0.16316084857243623,
+          "r_ci_low": -0.0023178434295020333,
+          "r_ci_high": 0.319941930731874,
+          "p": 0.05221762309218052,
+          "tau2": 0.01632982091022565,
+          "I2": 77.09566617980207
+        },
+        "SE": {
+          "k_effects": 6,
+          "n_cohorts": 4,
+          "r": 0.09044661965222045,
+          "r_ci_low": -0.12978432220063582,
+          "r_ci_high": 0.3021731672544891,
+          "p": 0.283042444250549,
+          "tau2": 0.002686105716733345,
+          "I2": 45.61068473397731
+        }
+      },
+      "rho=0.8": {
+        "SWS_stage": {
+          "k_effects": 6,
+          "n_cohorts": 4,
+          "r": 0.026011853575286775,
+          "r_ci_low": -0.16107888913213195,
+          "r_ci_high": 0.2112979570530658,
+          "p": 0.6902074067678615,
+          "tau2": 0.0,
+          "I2": 0.0
+        },
+        "SWS_spectral": {
+          "k_effects": 10,
+          "n_cohorts": 3,
+          "r": 0.10517981189341044,
+          "r_ci_low": -0.5321434988617193,
+          "r_ci_high": 0.6664178548244345,
+          "p": 0.582321699727045,
+          "tau2": 0.05447284358555297,
+          "I2": 71.4887622326665
+        },
+        "TST": {
+          "k_effects": 9,
+          "n_cohorts": 6,
+          "r": 0.16059221450166603,
+          "r_ci_low": -0.003805683731029178,
+          "r_ci_high": 0.3165378807616859,
+          "p": 0.05372432948752836,
+          "tau2": 0.015763426984941327,
+          "I2": 75.48581253453446
+        },
+        "SE": {
+          "k_effects": 6,
+          "n_cohorts": 4,
+          "r": 0.08457471927075229,
+          "r_ci_low": -0.11850536579028735,
+          "r_ci_high": 0.2808635332056147,
+          "p": 0.2774704889237294,
+          "tau2": 0.0006498936683504595,
+          "I2": 40.80660350922002
+        }
+      },
+      "rho=1.0": {
+        "SWS_stage": {
+          "k_effects": 6,
+          "n_cohorts": 4,
+          "r": 0.02614186908779971,
+          "r_ci_low": -0.1684687059271246,
+          "r_ci_high": 0.2187909057419974,
+          "p": 0.7001015027239494,
+          "tau2": 0.0,
+          "I2": 0.0
+        },
+        "SWS_spectral": {
+          "k_effects": 10,
+          "n_cohorts": 3,
+          "r": 0.09754370807327575,
+          "r_ci_low": -0.5277622467694741,
+          "r_ci_high": 0.6542812176849309,
+          "p": 0.6013444375871015,
+          "tau2": 0.047154798095774365,
+          "I2": 66.26741905444139
+        },
+        "TST": {
+          "k_effects": 9,
+          "n_cohorts": 6,
+          "r": 0.15823757957881118,
+          "r_ci_low": -0.0051918717691144855,
+          "r_ci_high": 0.31343391506451435,
+          "p": 0.05518927942864299,
+          "tau2": 0.015265164596945257,
+          "I2": 74.13102816526602
+        },
+        "SE": {
+          "k_effects": 6,
+          "n_cohorts": 4,
+          "r": 0.08018742698481608,
+          "r_ci_low": -0.11563999758200386,
+          "r_ci_high": 0.2700145966680334,
+          "p": 0.28406103365162005,
+          "tau2": 0.0,
+          "I2": 36.11126774829452
+        }
+      }
+    }
+  },
+  "S5_cognitively_normal_only": {
+    "rationale": "The hypothesis is explicitly about cognitively normal adults.",
+    "excluded_studies": [
+      "Jin2025"
+    ],
+    "results": {
+      "SWS_stage": {
+        "k_effects": 4,
+        "n_cohorts": 3,
+        "r": 0.01301254834276512,
+        "r_ci_low": -0.31959766206239254,
+        "r_ci_high": 0.34276784330240195,
+        "p": 0.8857311544384474,
+        "tau2": 0.0,
+        "I2": 0.0
+      },
+      "SWS_spectral": {
+        "k_effects": 10,
+        "n_cohorts": 3,
+        "r": 0.11221775001720118,
+        "r_ci_low": -0.5353626088323248,
+        "r_ci_high": 0.6767086573785538,
+        "p": 0.5653086196749967,
+        "tau2": 0.06146463271616089,
+        "I2": 76.71015278309949
+      },
+      "TST": {
+        "k_effects": 8,
+        "n_cohorts": 5,
+        "r": 0.19799394882020246,
+        "r_ci_low": -0.0016830978612597017,
+        "r_ci_high": 0.3824879130376993,
+        "p": 0.05119799463312186,
+        "tau2": 0.017259898172592898,
+        "I2": 81.53980612588562
+      },
+      "SE": {
+        "k_effects": 5,
+        "n_cohorts": 3,
+        "r": 0.13889077237600805,
+        "r_ci_low": -0.2984859333531467,
+        "r_ci_high": 0.5280557725659936,
+        "p": 0.3112107086531769,
+        "tau2": 0.012711644102869924,
+        "I2": 51.94563320625399
+      }
+    }
+  },
+  "S6_PSG_measured_exposures_only": {
+    "rationale": "N3 stage can only be measured by PSG, so comparing it against self-reported TST/SE mixes measurement modalities.",
+    "results": {
+      "SWS_stage": {
+        "k_effects": 6,
+        "n_cohorts": 4,
+        "r": 0.025875076306362776,
+        "r_ci_low": -0.15293611370642934,
+        "r_ci_high": 0.20304571827572865,
+        "p": 0.6784024527815408,
+        "tau2": 0.0,
+        "I2": 0.0
+      },
+      "SWS_spectral": {
+        "k_effects": 10,
+        "n_cohorts": 3,
+        "r": 0.11221775001720118,
+        "r_ci_low": -0.5353626088323248,
+        "r_ci_high": 0.6767086573785538,
+        "p": 0.5653086196749967,
+        "tau2": 0.06146463271616089,
+        "I2": 76.71015278309949
+      },
+      "TST": {
+        "k_effects": 3,
+        "n_cohorts": 3,
+        "r": 0.1759133151045449,
+        "r_ci_low": -0.30389989464477185,
+        "r_ci_high": 0.5845425634811099,
+        "p": 0.2599980382683957,
+        "tau2": 0.023140378086478095,
+        "I2": 60.992776270727475
+      },
+      "SE": {
+        "k_effects": 4,
+        "n_cohorts": 3,
+        "r": 0.10587994928037954,
+        "r_ci_low": -0.41590826172601,
+        "r_ci_high": 0.5752209209688803,
+        "p": 0.4925179148579443,
+        "tau2": 0.02774999769466752,
+        "I2": 61.67076602571672
+      }
+    }
+  },
+  "S7_leave_one_cohort_family_out": {
+    "SWS_stage": [
+      {
+        "omitted_cohort_family": "AgeWell_Caen",
+        "r": 0.03653860390861147,
+        "ci": [
+          -0.24746375066535226,
+          0.3147590250118457
+        ],
+        "p": 0.6411322859885187,
+        "n_cohorts_remaining": 3
+      },
+      {
+        "omitted_cohort_family": "BerkeleyAgingCohort",
+        "r": 0.02135280748194197,
+        "ci": [
+          -0.2299952582886138,
+          0.270030357366217
+        ],
+        "p": 0.7535781512600483,
+        "n_cohorts_remaining": 3
+      },
+      {
+        "omitted_cohort_family": "MARS",
+        "r": 0.01301254834276512,
+        "ci": [
+          -0.31959766206239254,
+          0.34276784330240195
+        ],
+        "p": 0.8857311544384474,
+        "n_cohorts_remaining": 3
+      },
+      {
+        "omitted_cohort_family": "NYU_Barcelona",
+        "r": 0.02924217294464779,
+        "ci": [
+          -0.22555808945988587,
+          0.28029804244718265
+        ],
+        "p": 0.6747706968717018,
+        "n_cohorts_remaining": 3
+      }
+    ],
+    "SWS_spectral": [
+      {
+        "omitted_cohort_family": "AgeWell_Caen",
+        "r": 0.18795546828298898,
+        "ci": [
+          -0.9972422383702397,
+          0.9987104587527036
+        ],
+        "p": 0.6137836907356466,
+        "n_cohorts_remaining": 2
+      },
+      {
+        "omitted_cohort_family": "BerkeleyAgingCohort",
+        "r": -0.024894629872981217,
+        "ci": [
+          -0.6901312259967805,
+          0.6631451009979942
+        ],
+        "p": 0.7664349462544392,
+        "n_cohorts_remaining": 2
+      },
+      {
+        "omitted_cohort_family": "MayoMCSA",
+        "r": 0.21471479492499979,
+        "ci": [
+          -0.9926926865219449,
+          0.9969395272732764
+        ],
+        "p": 0.5275586015525014,
+        "n_cohorts_remaining": 2
+      }
+    ],
+    "TST": [
+      {
+        "omitted_cohort_family": "A4",
+        "r": 0.20732582655835388,
+        "ci": [
+          0.022017145978242943,
+          0.37886192140828373
+        ],
+        "p": 0.03618455228754242,
+        "n_cohorts_remaining": 5
+      },
+      {
+        "omitted_cohort_family": "AIBL",
+        "r": 0.1626308639583836,
+        "ci": [
+          -0.06036904871102783,
+          0.3701684242120461
+        ],
+        "p": 0.11233550850359938,
+        "n_cohorts_remaining": 5
+      },
+      {
+        "omitted_cohort_family": "AgeWell_Caen",
+        "r": 0.15041600914145395,
+        "ci": [
+          -0.053803282949859345,
+          0.34255768668844655
+        ],
+        "p": 0.10987170990358015,
+        "n_cohorts_remaining": 5
+      },
+      {
+        "omitted_cohort_family": "BLSA",
+        "r": 0.12438122309187857,
+        "ci": [
+          -0.05150074853170739,
+          0.29277951527473556
+        ],
+        "p": 0.1207303125045697,
+        "n_cohorts_remaining": 5
+      },
+      {
+        "omitted_cohort_family": "BerkeleyAgingCohort",
+        "r": 0.14357092314039316,
+        "ci": [
+          -0.03984874451087174,
+          0.3176303825048085
+        ],
+        "p": 0.09514065991096635,
+        "n_cohorts_remaining": 5
+      },
+      {
+        "omitted_cohort_family": "MARS",
+        "r": 0.19799394882020246,
+        "ci": [
+          -0.0016830978612597017,
+          0.3824879130376993
+        ],
+        "p": 0.05119799463312186,
+        "n_cohorts_remaining": 5
+      }
+    ],
+    "SE": [
+      {
+        "omitted_cohort_family": "AIBL",
+        "r": 0.10587994928037954,
+        "ci": [
+          -0.41590826172601,
+          0.5752209209688803
+        ],
+        "p": 0.4925179148579443,
+        "n_cohorts_remaining": 3
+      },
+      {
+        "omitted_cohort_family": "AgeWell_Caen",
+        "r": 0.1319637205585096,
+        "ci": [
+          -0.3119562088904137,
+          0.5285902473144808
+        ],
+        "p": 0.3365518049286502,
+        "n_cohorts_remaining": 3
+      },
+      {
+        "omitted_cohort_family": "BerkeleyAgingCohort",
+        "r": 0.06140184299463138,
+        "ci": [
+          -0.1456153324175803,
+          0.26326766851966454
+        ],
+        "p": 0.33158213379052837,
+        "n_cohorts_remaining": 3
+      },
+      {
+        "omitted_cohort_family": "MARS",
+        "r": 0.13889077237600805,
+        "ci": [
+          -0.2984859333531467,
+          0.5280557725659936
+        ],
+        "p": 0.3112107086531769,
+        "n_cohorts_remaining": 3
+      }
+    ]
+  },
+  "S8_fixed_effect": {
+    "SWS_stage": {
+      "k": 4,
+      "r": 0.025875076306362776,
+      "r_ci_low": -0.08478739569798997,
+      "r_ci_high": 0.13590699536947434,
+      "p": 0.6473022376473758
+    },
+    "SWS_spectral": {
+      "k": 3,
+      "r": 0.04453392056552668,
+      "r_ci_low": -0.07319675599467429,
+      "r_ci_high": 0.16104047958866397,
+      "p": 0.45876955983139767
+    },
+    "TST": {
+      "k": 6,
+      "r": 0.03557492906220951,
+      "r_ci_low": 0.010339066102363976,
+      "r_ci_high": 0.060765504322088555,
+      "p": 0.005735727188560102
+    },
+    "SE": {
+      "k": 4,
+      "r": 0.08870644726753416,
+      "r_ci_low": -0.002089003200539195,
+      "r_ci_high": 0.17805129106376644,
+      "p": 0.05549438107019354
+    }
+  },
+  "S9_small_study_bias": {
+    "SWS_stage": {
+      "level": "cohort-family aggregated",
+      "k": 4,
+      "egger": {
+        "k": 4,
+        "intercept": -0.008197452907839242,
+        "intercept_se": 0.4458306975392049,
+        "slope": 0.026757984683054858,
+        "p": 0.9869995836594222,
+        "interpretable": false,
+        "note": "k < 5: Egger's test has essentially no power here"
+      },
+      "trim_and_fill": {
+        "k": 4,
+        "side": "left",
+        "n_imputed": 0,
+        "unadjusted_z": 0.025880853250560814,
+        "unadjusted_r": 0.025875076306362776,
+        "interpretable": false,
+        "note": "k < 10: trim-and-fill has essentially no power and should not be interpreted",
+        "adjusted_z": 0.025880853250560814,
+        "adjusted_r": 0.025875076306362776,
+        "adjusted_ci_r": [
+          -0.08478739569798997,
+          0.13590699536947434
+        ]
+      },
+      "egger_all_effects": {
+        "k": 6,
+        "intercept": -0.12258931523359748,
+        "intercept_se": 1.5465409610522798,
+        "slope": 0.038941688659830165,
+        "p": 0.94062761062853,
+        "interpretable": true,
+        "note": null
+      }
+    },
+    "SWS_spectral": {
+      "level": "cohort-family aggregated",
+      "k": 3,
+      "egger": {
+        "k": 3,
+        "intercept": 4.987746016163917,
+        "intercept_se": 3.917286853563593,
+        "slope": -0.4562405608845591,
+        "p": 0.4238384409415572,
+        "interpretable": false,
+        "note": "k < 5: Egger's test has essentially no power here"
+      },
+      "trim_and_fill": {
+        "k": 3,
+        "side": "left",
+        "n_imputed": 0,
+        "unadjusted_z": 0.1126923875312183,
+        "unadjusted_r": 0.11221775001720118,
+        "interpretable": false,
+        "note": "k < 10: trim-and-fill has essentially no power and should not be interpreted",
+        "adjusted_z": 0.1126923875312183,
+        "adjusted_r": 0.11221775001720118,
+        "adjusted_ci_r": [
+          -0.19564917875489904,
+          0.3999499069080307
+        ]
+      },
+      "egger_all_effects": {
+        "k": 10,
+        "intercept": 4.4153671653642395,
+        "intercept_se": 1.759103333433371,
+        "slope": -0.4717766195317937,
+        "p": 0.03637035880656427,
+        "interpretable": true,
+        "note": null
+      }
+    },
+    "TST": {
+      "level": "cohort-family aggregated",
+      "k": 6,
+      "egger": {
+        "k": 6,
+        "intercept": 2.1175743650492342,
+        "intercept_se": 0.6591523112834923,
+        "slope": -0.007471934565879111,
+        "p": 0.03250926338614913,
+        "interpretable": true,
+        "note": null
+      },
+      "trim_and_fill": {
+        "k": 6,
+        "side": "left",
+        "n_imputed": 1,
+        "unadjusted_z": 0.16463228426891902,
+        "unadjusted_r": 0.16316084857243623,
+        "interpretable": false,
+        "note": "k < 10: trim-and-fill has essentially no power and should not be interpreted",
+        "adjusted_z": 0.14448617067617686,
+        "adjusted_r": 0.14348905297243236,
+        "adjusted_ci_r": [
+          0.02471541247023966,
+          0.2582681539521961
+        ],
+        "trimmed_centre_z": 0.14456976291600673
+      },
+      "egger_all_effects": {
+        "k": 9,
+        "intercept": 2.3228300407117617,
+        "intercept_se": 0.5392849419124857,
+        "slope": -0.014189823069327015,
+        "p": 0.0035350477388461196,
+        "interpretable": true,
+        "note": null
+      }
+    },
+    "SE": {
+      "level": "cohort-family aggregated",
+      "k": 4,
+      "egger": {
+        "k": 4,
+        "intercept": 1.4808326705164072,
+        "intercept_se": 2.431359387963997,
+        "slope": -0.041670674548013265,
+        "p": 0.6044551213956242,
+        "interpretable": false,
+        "note": "k < 5: Egger's test has essentially no power here"
+      },
+      "trim_and_fill": {
+        "k": 4,
+        "side": "left",
+        "n_imputed": 0,
+        "unadjusted_z": 0.09069447294734641,
+        "unadjusted_r": 0.09044661965222045,
+        "interpretable": false,
+        "note": "k < 10: trim-and-fill has essentially no power and should not be interpreted",
+        "adjusted_z": 0.09069447294734641,
+        "adjusted_r": 0.09044661965222045,
+        "adjusted_ci_r": [
+          -0.017268102132342162,
+          0.19608599491587705
+        ]
+      },
+      "egger_all_effects": {
+        "k": 6,
+        "intercept": 2.094097372573926,
+        "intercept_se": 1.8918010885860643,
+        "slope": -0.0867441949888188,
+        "p": 0.33040781941506825,
+        "interpretable": true,
+        "note": null
+      }
+    }
+  },
+  "S10_CSF_secondary": {
+    "rationale": "CSF Abeta42 inversely proxies deposition, and its sign relative to burden flips between pre-deposition and post-deposition samples. Pooled here only stratified by cognitive status, never with PET.",
+    "n_effects": 9,
+    "by_cognitive_status": {
+      "cognitively_normal": {
+        "studies": [
+          "Ju2017",
+          "Varga2016"
+        ],
+        "k": 6,
+        "by_domain": {
+          "SWS_stage": {
+            "k_effects": 2,
+            "n_cohorts": 1,
+            "r": 0.35501015508508454,
+            "r_ci_low": 0.06590318889997267,
+            "r_ci_high": 0.5891288572452082,
+            "p": 0.017132618135369516,
+            "tau2": 0.0,
+            "I2": 0.0
+          },
+          "SWS_spectral": {
+            "k_effects": 2,
+            "n_cohorts": 2,
+            "r": 0.5016357559375774,
+            "r_ci_low": -0.8622117155474373,
+            "r_ci_high": 0.9838321337235043,
+            "p": 0.16461186804009129,
+            "tau2": 0.0,
+            "I2": 0.0
+          },
+          "TST": {
+            "k_effects": 1,
+            "n_cohorts": 1,
+            "r": 0.0,
+            "r_ci_low": -0.32853573796375035,
+            "r_ci_high": 0.32853573796375035,
+            "p": 1.0,
+            "tau2": 0.0,
+            "I2": 0.0
+          },
+          "SE": {
+            "k_effects": 1,
+            "n_cohorts": 1,
+            "r": 0.0,
+            "r_ci_low": -0.4806447660911053,
+            "r_ci_high": 0.4806447660911053,
+            "p": 1.0,
+            "tau2": 0.0,
+            "I2": 0.0
+          }
+        }
+      },
+      "mixed_SCI_MCI_AD": {
+        "studies": [
+          "Liguori2020"
+        ],
+        "k": 3,
+        "by_domain": {
+          "SWS_stage": {
+            "k_effects": 1,
+            "n_cohorts": 1,
+            "r": 0.362,
+            "r_ci_low": 0.2509701399740081,
+            "r_ci_high": 0.4636283929330392,
+            "p": 1.4032306659819977e-09,
+            "tau2": 0.0,
+            "I2": 0.0
+          },
+          "TST": {
+            "k_effects": 1,
+            "n_cohorts": 1,
+            "r": 0.30599999999999994,
+            "r_ci_low": 0.19101314510060702,
+            "r_ci_high": 0.41270227219480266,
+            "p": 4.461550956034234e-07,
+            "tau2": 0.0,
+            "I2": 0.0
+          },
+          "SE": {
+            "k_effects": 1,
+            "n_cohorts": 1,
+            "r": 0.403,
+            "r_ci_low": 0.2954141540109173,
+            "r_ci_high": 0.5004926216153818,
+            "p": 8.962933844514815e-12,
+            "tau2": 0.0,
+            "I2": 0.0
+          }
+        }
+      }
+    },
+    "note": "Varga 2016 (cognitively normal, pre-deposition) and Liguori 2020 (mixed SCI/MCI/AD) give opposite-signed relationships for the same construct once aligned to burden; this is why CSF is excluded from the primary model."
+  },
+  "S11_benchmark_vs_published": {
+    "chen2025_sleep_quality_vs_amyloid_PET": {
+      "fisher_z": 0.153,
+      "ci": [
+        0.005,
+        0.302
+      ],
+      "k": 9,
+      "I2_pct": 99,
+      "as_r": 0.15181721489334746
+    },
+    "chen2025_sleep_duration_vs_amyloid_PET": {
+      "reported_fisher_z": -0.002,
+      "ci": [
+        -0.003,
+        -0.001
+      ],
+      "k": 6,
+      "caveat": "these are raw regression-coefficient units mislabelled as Fisher z; a Fisher z of -0.002 with that CI is not a credible pooled correlation and is not comparable to our estimates"
+    },
+    "our_TST_vs_amyloid_PET": {
+      "r": 0.16316084857243623,
+      "ci": [
+        -0.0023178434295020333,
+        0.319941930731874
+      ],
+      "p": 0.05221762309218052
+    },
+    "our_SWS_stage_vs_amyloid_PET": {
+      "r": 0.025875076306362776,
+      "ci": [
+        -0.15293611370642934,
+        0.20304571827572865
+      ],
+      "p": 0.6784024527815408
+    },
+    "comparison": "Our TST estimate (r = 0.163) is of the same order as Chen 2025's sleep-quality pooling (r = 0.152), which is reassuring for the harmonisation; the N3-stage estimate is an order of magnitude smaller and has no published counterpart.",
+    "prior_rows_available": 7
+  }
+}

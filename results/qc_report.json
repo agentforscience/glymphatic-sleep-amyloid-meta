@@ -1,0 +1,118 @@
+{
+  "seed": 42,
+  "input_file": "datasets/meta_analysis/effect_sizes.csv",
+  "n_effects": 49,
+  "n_studies": 17,
+  "n_cohort_families": 12,
+  "n_participants_unique_cohort_max": 5437,
+  "duplicate_effect_ids": [],
+  "missing_n": 0,
+  "missing_burden_aligned": 0,
+  "missing_provenance": 0,
+  "effects_with_r_out_of_range": [],
+  "effect_type_counts": {
+    "pearson_r": 20,
+    "narrative_null": 7,
+    "r_from_partial_eta2": 7,
+    "unstd_beta_per_SD": 3,
+    "partial_r": 2,
+    "unstd_beta_tertile": 2,
+    "unstd_beta_per_ordinal_category": 2,
+    "unstd_beta": 2,
+    "unstd_beta_group_contrast": 2,
+    "kendall_tau": 1,
+    "unstd_beta_per_hour": 1
+  },
+  "outcome_class_counts": {
+    "deposition_pet": 27,
+    "deposition_pet_change": 13,
+    "soluble_csf": 9
+  },
+  "conversion_rule_counts": {
+    "direct_r": 29,
+    "recover_r_from_p_and_df": 12,
+    "imputed_null_z0": 7,
+    "kendall_tau_to_r_sin": 1
+  },
+  "n_usable": 49,
+  "n_unusable": 0,
+  "unusable_detail": [],
+  "n_df_approximate": 7,
+  "amyloid_pet": {
+    "n_effects": 40,
+    "n_usable": 40,
+    "n_imputed_null": 7,
+    "n_recovered_from_p": 12,
+    "by_exposure_domain": [
+      {
+        "exposure_domain": "REM_spectral",
+        "k": 1,
+        "k_usable": 1,
+        "n_cohorts": 1
+      },
+      {
+        "exposure_domain": "SE",
+        "k": 6,
+        "k_usable": 6,
+        "n_cohorts": 4
+      },
+      {
+        "exposure_domain": "SE_variability",
+        "k": 1,
+        "k_usable": 1,
+        "n_cohorts": 1
+      },
+      {
+        "exposure_domain": "SWS_spectral",
+        "k": 10,
+        "k_usable": 10,
+        "n_cohorts": 3
+      },
+      {
+        "exposure_domain": "SWS_stage",
+        "k": 6,
+        "k_usable": 6,
+        "n_cohorts": 4
+      },
+      {
+        "exposure_domain": "TST",
+        "k": 9,
+        "k_usable": 9,
+        "n_cohorts": 6
+      },
+      {
+        "exposure_domain": "TST_variability",
+        "k": 1,
+        "k_usable": 1,
+        "n_cohorts": 1
+      },
+      {
+        "exposure_domain": "WASO",
+        "k": 2,
+        "k_usable": 2,
+        "n_cohorts": 2
+      },
+      {
+        "exposure_domain": "other_stage",
+        "k": 4,
+        "k_usable": 4,
+        "n_cohorts": 2
+      }
+    ]
+  },
+  "cohort_family_effect_counts": {
+    "BerkeleyAgingCohort": 13,
+    "AgeWell_Caen": 9,
+    "NYU_CBH": 4,
+    "MARS": 4,
+    "MayoMCSA": 3,
+    "RomeTorVergata": 3,
+    "BLSA": 3,
+    "AIBL": 3,
+    "WashU": 2,
+    "A4": 2,
+    "AU_community": 2,
+    "NYU_Barcelona": 1
+  },
+  "sign_mismatches": []
+}
