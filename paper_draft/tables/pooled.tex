@@ -1,0 +1,28 @@
+\begin{table}[t]
+    \centering
+    \resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+    \begin{tabular}{@{}lccrcccccc@{}}
+        \toprule
+        \textbf{Exposure} & \textbf{$k$ eff.} & \textbf{cohorts} & \textbf{$\Sigma n$} &
+        \textbf{pooled $r$} & \textbf{95\% CI} & \textbf{$p$} & \textbf{perm.\ $p$} &
+        \textbf{$\tau^2$} & \textbf{$I^2$} \\
+        \midrule
+        \stage \textit{(the hypothesis's exposure)} & 6 & 4 & 275 & $\mathbf{+0.026}$ & $[-0.153, +0.203]$ & 0.68 & 0.50 & 0.000 & \phantom{0}0\% \\
+        \spectral                                   & 10 & 3 & 223 & $+0.112$ & $[-0.535, +0.677]$ & 0.57 & 1.00 & 0.062 & 77\% \\
+        \tst                                        & 9 & 6 & 4{,}920 & $\mathbf{+0.163}$ & $[-0.002, +0.320]$ & 0.052 & 0.062 & 0.016 & 77\% \\
+        \se                                         & 6 & 4 & 425 & $+0.090$ & $[-0.130, +0.302]$ & 0.28 & 0.50 & 0.003 & 46\% \\
+        \midrule
+        \waso                                       & 2 & 2 & 108 & $+0.109$ & $[-0.975, +0.984]$ & 0.65 & 1.00 & 0.043 & 64\% \\
+        Other stages (N1/N2/REM)                    & 4 & 2 & 108 & $+0.198$ & $[-0.728, +0.868]$ & 0.26 & 0.50 & 0.000 & \phantom{0}0\% \\
+        \bottomrule
+    \end{tabular}%
+    }
+    \caption{E1: pooled associations between each sleep metric and amyloid PET burden. Positive
+    $r$ means \emph{worse sleep is associated with more amyloid}, so positive supports the
+    hypothesis. Estimates are REML random effects with HKSJ standard errors on one synthetic
+    effect per cohort family. The exposure the hypothesis names (\stage) is the weakest of the
+    four preregistered strata and the only one with zero heterogeneity; the largest estimate
+    belongs to \tst, which the hypothesis predicts should be weaker. Permutation $p$-values
+    enumerate all $2^k$ sign flips of the cohort-level effects.}
+    \label{tab:pooled}
+\end{table}

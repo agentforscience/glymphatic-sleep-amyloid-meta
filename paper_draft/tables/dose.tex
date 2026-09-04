@@ -1,0 +1,23 @@
+\begin{table}[t]
+    \centering
+    \small
+    \begin{tabular}{@{}lccccc@{}}
+        \toprule
+        \textbf{Exposure} & \textbf{$\Delta$SUVR} & \textbf{95\% CI} & \textbf{$\Delta$Centiloid}
+        & \textbf{\% of A$-$/A$+$ gap} & \textbf{clause (ii)} \\
+        \midrule
+        \stage    & $\mathbf{+0.0047}$ & $[-0.028, +0.038]$ & $+0.38$ & $\mathbf{1.8\%}$ & refuted \\
+        \tst      & $+0.0292$ & $[+0.000, +0.064]$ & $+2.41$ & $11.2\%$ & --- \\
+        \se       & $+0.0161$ & $[-0.024, +0.059]$ & $+1.33$ & $6.2\%$ & --- \\
+        \spectral & $+0.0199$ & $[-0.097, +0.124]$ & $+1.71$ & $7.7\%$ & --- \\
+        \bottomrule
+    \end{tabular}
+    \caption{E4: the dose statement in physical units --- amyloid change per 10-percentage-point
+    worsening of each sleep metric, with all three conversion inputs propagated by Monte Carlo
+    (10{,}000 draws). The A$-$/A$+$ separation is 0.26\,SUVR (22 Centiloid) from
+    \citet{jack2017}. The preregistered refutation criterion for clause (ii) was ``CI includes 0
+    \emph{or} magnitude below $\sim$5\% of the gap''; the \stage estimate fails both. Rows for
+    the comparators are expressed per 10 \pp only to place all strata on one axis; for those
+    exposures the natural unit differs.}
+    \label{tab:dose}
+\end{table}

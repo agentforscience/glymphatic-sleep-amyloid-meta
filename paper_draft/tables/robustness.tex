@@ -1,0 +1,70 @@
+\begin{table}[t]
+    \centering
+    \small
+    \begin{minipage}[t]{0.54\textwidth}
+    \centering
+    \textbf{(a) Specification curve (pooled $r$)}\\[2pt]
+    \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+\begin{tabular}{@{}lcccc@{}}
+        \toprule
+        \textbf{Specification} & \textbf{\stage} & \textbf{\spectral} & \textbf{\tst} & \textbf{\se} \\
+        \midrule
+        \textbf{PRIMARY}                 & $\mathbf{+0.026}$ & $+0.112$ & $+0.163$ & $+0.090$ \\
+        S1 drop imputed nulls            & $+0.029$ & $+0.188$ & $+0.200$ & $+0.194$ \\
+        S2 drop $p$-recovered betas      & $+0.013$ & $+0.215$ & $+0.151$ & $+0.036$ \\
+        S1+S2 native correlations only   & $+0.017$ & $\mathbf{+0.444}$ & $+0.299$ & $+0.187$ \\
+        S3 df $= n-2$                    & $+0.025$ & $+0.113$ & $+0.161$ & $+0.090$ \\
+        S3 df $= n-1-2n_{\mathrm{cov}}$  & $+0.027$ & $+0.112$ & $+0.166$ & $+0.091$ \\
+        S4 $\rho = 0.3$                  & $+0.026$ & $+0.122$ & $+0.167$ & $+0.104$ \\
+        S4 $\rho = 0.8$                  & $+0.026$ & $+0.105$ & $+0.161$ & $+0.085$ \\
+        S4 $\rho = 1.0$                  & $+0.026$ & $+0.098$ & $+0.158$ & $+0.080$ \\
+        S5 cognitively normal only       & $+0.013$ & $+0.112$ & $+0.198$ & $+0.139$ \\
+        S6 PSG exposures only            & $+0.026$ & $+0.112$ & $+0.176$ & $+0.106$ \\
+        S8 fixed effect                  & $+0.026$ & $+0.045$ & $+0.036$ & $+0.089$ \\
+        \bottomrule
+    \end{tabular}%
+}
+    \end{minipage}
+    \hfill
+    \hfill
+    \begin{minipage}[t]{0.40\textwidth}
+    \centering
+    \textbf{(b) Leave-one-cohort-family-out}\\[2pt]
+    \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+\begin{tabular}{@{}lcc@{}}
+        \toprule
+        \textbf{Omitted} & \textbf{\stage} & \textbf{\spectral} \\
+        \midrule
+        (none)     & $+0.026$ & $+0.112$ \\
+        \agewell   & $+0.037$ & $+0.188$ \\
+        \berkeley  & $+0.021$ & $\mathbf{-0.025}$ \\
+        \mayo      & --- & $+0.215$ \\
+        \mars      & $+0.013$ & --- \\
+        NYU-Barcelona & $+0.029$ & --- \\
+        \bottomrule
+    \end{tabular}%
+}\\[8pt]
+    \textbf{(c) Small-study bias}\\[2pt]
+    \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+\begin{tabular}{@{}lccc@{}}
+        \toprule
+        \textbf{Stratum} & \textbf{$k$} & \textbf{Egger $p$} & \textbf{trim-fill} \\
+        \midrule
+        \stage    & 4 & 0.94 & 0 imputed \\
+        \spectral & 3 & $\mathbf{0.036}$ & 0 imputed \\
+        \tst      & 6 & $\mathbf{0.0035}$ & $0.163 \to 0.143$ \\
+        \se       & 4 & 0.33 & 0 imputed \\
+        \bottomrule
+    \end{tabular}%
+}
+    \end{minipage}
+    \caption{E5: robustness. \textit{(a)} The \stage null is invariant across all 17
+    preregistered specifications (range $+0.013$ to $+0.037$). The S1+S2 row --- exactly the
+    analysis a conventional meta-analysis would run --- pushes \spectral to $+0.444$, showing
+    that reported nulls and $p$-recovered coefficients carry most of the corrective information.
+    \textit{(b)} The \stage null holds whichever cohort family is removed; the \spectral estimate
+    is carried entirely by \berkeley. \textit{(c)} Egger $p$ over all effects; with 3--6 cohort
+    families these diagnostics have little power, but the detectable asymmetry sits in the
+    comparator strata, not in \stage.}
+    \label{tab:robustness}
+\end{table}

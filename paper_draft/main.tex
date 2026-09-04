@@ -1,0 +1,60 @@
+\documentclass{article}
+
+\usepackage[final]{neurips_2025}
+% The style file expects a track option alongside [final]; supply the default
+% main-track notice string so the camera-ready footer resolves.
+\makeatletter
+\providecommand{\@trackname}{39th Conference on Neural Information Processing Systems (NeurIPS 2025).}
+\makeatother
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage{subcaption}
+
+% commands/general.tex customises algpseudocode spacing; define the hook so the
+% file can be imported without loading the algorithm packages.
+\providecommand{\algorithmicindent}{}
+
+% Import command files
+\input{commands/math}
+\input{commands/general}
+\input{commands/macros}
+
+\captionsetup[table]{aboveskip=4pt,belowskip=4pt}
+\captionsetup[figure]{aboveskip=4pt,belowskip=4pt}
+
+\bibliographystyle{plainnat}
+
+\title{Slow-Wave Sleep Stage Duration Is Not\\ Associated with Amyloid-Beta Burden:\\ A Cohort-Aware Meta-Analysis with a\\ Measurement-Reliability Null Model}
+
+\author{NeuriCo}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\input{sections/abstract}
+\end{abstract}
+
+\input{sections/introduction}
+\input{sections/related_work}
+\input{sections/methodology}
+\input{sections/results}
+\input{sections/discussion}
+\input{sections/conclusion}
+
+\bibliography{references}
+
+\appendix
+\input{appendix/appendix}
+
+\end{document}

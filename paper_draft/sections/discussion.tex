@@ -1,0 +1,124 @@
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{Verdict on each clause}
+
+Clause (i) is \textbf{refuted} against its own preregistered criterion: the pooled estimate is
+$r = +0.026$ with a CI that includes zero, and equivalence testing rejects a true correlation as
+large as $r = 0.20$. Clause (ii) is \textbf{refuted on both criteria}:
+$\Delta\mathrm{SUVR} = +0.005$ per 10 \pp with a CI including zero, and a magnitude of 1.8\% of
+the amyloid-negative/positive separation against a 5\% threshold. Clause (iii) is
+\textbf{not supported and contradicted in direction}: all three paired contrasts are negative,
+and the reliability null model predicts \stage should lead \tst by $1.86\times$ when the observed
+ratio is $0.16\times$. Because the hypothesis is a conjunction, it fails.
+
+\subsection{Stage is not spectrum, and the spectrum is one cohort}
+
+The most useful result here is not the \stage null in isolation --- it is the dissociation
+combined with the cohort concentration. The mechanistic story \citep{xie2013,fultz2019} is about
+slow \emph{oscillations} driving CSF flow, and the human evidence supporting it is spectral:
+$r = -0.45$ \citep{mander2015}, $-0.36$ \citep{winer2019}, $-0.52$ \citep{winer2020}. Every one
+of those is the Berkeley Aging Cohort Study. Pooled across all three cohort families that have
+measured spectral slow-wave activity, the estimate is $r = +0.112$ with $I^2 = 77\%$; with
+Berkeley removed it is $-0.025$. Meanwhile the \emph{stage} metric --- the one clinicians read
+off a sleep study, and the one the hypothesis names --- is essentially zero and homogeneously
+so, with four independent cohort families agreeing.
+
+The literature's habit of writing ``slow-wave sleep'' for both is therefore not a semantic
+quibble. The construct with a positive but fragile signal and the construct with a tight null
+are different measurements, and only one of them has ever produced the effect that motivates the
+field's interest. We do not refute the refined, spectral version of the hypothesis: our spectral
+stratum has a minimum detectable effect of $r = 0.417$ and rejects no equivalence bound, so its
+honest verdict is insufficient evidence in either direction.
+
+\subsection{How much to believe the total-sleep-time result}
+
+\tst comes out ahead, which the hypothesis explicitly predicts should not happen, but three
+things temper it. It is not itself significant at $\alpha = 0.05$ ($p = 0.052$, permutation
+$p = 0.062$). It shows the clearest funnel asymmetry of any stratum, and trim-and-fill nudges it
+to $r = 0.143$. And its $I^2$ is 77\%, driven by disagreement between the very large self-report
+cohorts (\afour, $r \approx 0.02$) and the small PSG cohorts (\berkeley $0.36$, \blsa $0.33$) ---
+itself a small-study signature. The fair statement is not that \tst beats \stage and is real, but
+that \tst is the only sleep metric here with a defensible non-zero signal, and even that signal
+is fragile, while \stage has no signal at all under any specification.
+
+\subsection{What the reliability model adds}
+
+Without E3, the finding ``\stage $\approx 0$ while \tst $\approx 0.16$'' would be ambiguous:
+perhaps N3 is simply noisier. E3 shows the reverse, and disposes of a common defence of the
+hypothesis --- that single-night polysomnography is too noisy to detect the N3 effect. It is too
+noisy for total sleep time; it is not too noisy for N3. The literature is at its cleanest exactly
+where it finds nothing. We designed this analysis expecting it to \emph{excuse} part of the
+shortfall, and it became the strongest quantitative argument against clause (iii). We think the
+same null model is worth running whenever a field claims one measure of a construct outperforms
+another.
+
+A second methodological lesson comes from the specification curve: $\tau^2$ estimator, $\rho$,
+degrees-of-freedom rule and fixed-versus-random effects barely move anything, but whether
+reported nulls and unstandardised coefficients are included moves the spectral estimate from
+$+0.444$ to $+0.112$. In this literature, extraction completeness dominates statistical
+technique.
+
+\subsection{Limitations}
+
+\para{Study-level design.} This is a meta-analysis of published effects, not individual
+participant data. ADNI, A4, BLSA, AIBL, WRAP, \mayo, \agewell and OASIS-3 all require data-use
+agreements with human review that could not be completed here. A genuine per-10\%-N3
+dose-response \emph{curve} therefore cannot be estimated: \secref{sec:e4} converts pooled
+standardised effects using external dispersion and reference scales, which assumes linearity
+over the range and that the external SDs apply to the study populations.
+
+\para{Power.} With 3--6 cohort families per stratum, $\tau^2$ is estimated unstably, the spectral
+prediction interval spans the whole scale, and funnel-based diagnostics are near-powerless. HKSJ,
+exact permutation and TOST keep the small-$k$ inference honest but cannot manufacture
+information. The \stage stratum is precise enough to exclude $r \geq 0.20$ and no more.
+
+\para{Conversion assumptions.} Test-statistic recovery assumes the reported $p$-value
+corresponds to the coefficient's $t$-test with the stated degrees of freedom; covariate counts
+were not fully recoverable from the text for 2 of 13 adjustment strings, though S3 shows the
+answer is insensitive to a $\pm n_{\mathrm{cov}}$ change. Imputing $z = 0$ for narrative nulls
+understates their true uncertainty; S1 removes them and the conclusion is unchanged. The
+dependency correlations $\rho = 0.6$ and $\rho_w = 0.5$ are assumptions, not estimates; both
+were varied without changing any conclusion.
+
+\para{Reliability source.} The ICCs come from \sleepedf --- a healthy, mostly non-clinical
+sample of 75 subjects on two consecutive nights, scored by the older Rechtschaffen--Kales
+criteria with S3+S4 merged to N3. Consecutive-night ICCs include a first-night effect and may
+understate the reliability of a habitual measure, and the amyloid cohorts are older and more
+clinically heterogeneous. We therefore treat E3 as an order-of-magnitude prediction, and note
+that the conclusion holds across the full CI of every ICC and under an alternative self-report
+reliability assumption. Spectral slow-wave activity has no reliability estimate here at all,
+because spectral power requires the raw EEG rather than the hypnogram annotations we hold, so
+that stratum is not disattenuated.
+
+\para{Corpus completeness.} Of 74 selected papers, 54 yielded full text; 17 of those were
+recovered by typesetting PMC full-text HTML because PMC blocks automated PDF retrieval, so
+figures and image-based tables are absent from them and a figure-only effect size could have
+been missed. Twenty records remained abstract-only. All extractions are single-coder with
+verbatim provenance quotes rather than dual independent extraction --- a real deviation from
+PRISMA practice.
+
+\para{Threats we cannot rule out.} Residual confounding by age, APOE4 status and apnea differs
+across contributing studies and is only partly adjusted. Publication bias in the \emph{stage}
+literature would most plausibly suppress positive N3 findings --- nulls in this area are usually
+reported in passing, as ours largely were --- which would bias our estimate downward, though the
+bias diagnostics give no sign of it. Finally, a real N3 effect confined to a specific brain
+region or a specific sub-band would be invisible to a global-burden meta-analysis. Our null is
+about global amyloid PET and stage-level N3, and it does not exclude regionally or spectrally
+specific mechanisms.
+
+\subsection{Broader implications}
+
+\para{For trial design.} Targeting N3 stage minutes as a surrogate for amyloid clearance is not
+supported by the aggregate human evidence. If slow-wave enhancement is to be tested, the exposure
+should be defined spectrally (proportion of $<$1\,Hz activity), the trial should be powered for
+effects well below $r = 0.45$, and it should not assume the Berkeley-scale effect will replicate.
+
+\para{For measurement practice.} The stage and spectral definitions should be reported separately
+and never collapsed. Studies should report both from the same recording, as \citet{winer2020}
+did; that single practice is what made the decisive comparison in this analysis possible.
+
+\para{For meta-analytic practice.} Restricting to natively-reported correlations gives a spectral
+estimate of $+0.444$ rather than $+0.112$. Reported nulls and unstandardised coefficients are not
+optional extras in this area --- they carry most of the corrective information, and any synthesis
+that discards them will recover the literature's headline effect rather than test it.

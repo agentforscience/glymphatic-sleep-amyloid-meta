@@ -1,0 +1,27 @@
+\begin{table}[t]
+    \centering
+    \small
+    \resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+\begin{tabular}{@{}llc@{}}
+        \toprule
+        \textbf{Input type} & \textbf{Conversion rule} & \textbf{PET effects} \\
+        \midrule
+        \texttt{pearson\_r}, \texttt{partial\_r}, \texttt{r\_from\_partial\_eta2}
+            & used directly as $r$ (with $r = \sqrt{\eta_p^2}$ for a 1-df contrast) & 20 \\
+        \texttt{kendall\_tau}
+            & $r = \sin(\pi\tau/2)$ (Greiner's relation) & 1 \\
+        \texttt{unstd\_beta\_*}
+            & test-statistic recovery, \eqref{eq:recovery} & 12 \\
+        \texttt{narrative\_null}
+            & imputed $z = 0$, $v = 1/(n-3)$ & 7 \\
+        \midrule
+        \multicolumn{2}{@{}l}{\textbf{Total usable amyloid-PET effects}} & \textbf{40} \\
+        \bottomrule
+    \end{tabular}%
+}
+    \caption{Effect harmonisation rules, fixed in advance and applied uniformly. All effects are
+    pooled as Fisher $z$ with $v = 1/(n-3)$. Test-statistic recovery raises the usable
+    amyloid-PET set from 21 native correlations to 40 effects and is what brings the two largest
+    cohorts onto the common metric.}
+    \label{tab:conversion}
+\end{table}

@@ -1,0 +1,46 @@
+\section{Analysis artefacts and reproducibility}
+\label{app:artifacts}
+
+\Tabref{tab:artifacts} lists the outputs of the pipeline. The full run takes about 29 seconds on
+CPU with seed 42; validation re-runs the entire pipeline in a scratch copy and confirms all eight
+result files are bit-identical, with 39 of 39 checks passing, including a cross-check of the REML
+point estimates against PyMARE (agreement to $4.4 \times 10^{-9}$ on all four strata) and an
+exactness check of the test-statistic recovery in \eqref{eq:recovery} (recovering $r$ from the
+$p$-value of a simple correlation returns the original $r$ to within $10^{-8}$).
+
+\begin{table}[h]
+    \centering
+    \small
+    \begin{tabular}{@{}ll@{}}
+        \toprule
+        \textbf{Artefact} & \textbf{Contents} \\
+        \midrule
+        \texttt{harmonised\_effects.csv} & all 49 effects with conversion rule, $z$, $v$, usability and reason \\
+        \texttt{qc\_report.json}         & data-quality checks and conversion audit \\
+        \texttt{e1\_pooled.json}         & pooled estimates per stratum: naive, cohort-aggregated, RVE, by design \\
+        \texttt{e2\_specificity.json}    & between-stratum and within-study paired contrasts, $\rho$ sensitivity, Holm \\
+        \texttt{e3\_attenuation.json}    & ICCs, measurement-only predictions, disattenuated estimates, PSG-only arm \\
+        \texttt{e4\_dose\_response.json} & Monte-Carlo dose conversion, longitudinal framing, feasibility check \\
+        \texttt{e5\_robustness.json}     & S1--S11 sensitivity analyses, leave-one-out, bias diagnostics, CSF secondary \\
+        \texttt{e6\_precision.json}      & detectable effects, power, TOST equivalence \\
+        \texttt{validation\_report.json} & 39 validation checks including the PyMARE cross-check and re-run \\
+        \bottomrule
+    \end{tabular}
+    \caption{Output artefacts. Every figure additionally has a tabular companion CSV.}
+    \label{tab:artifacts}
+\end{table}
+
+\section{Contributing cohort families}
+\label{app:cohorts}
+
+Effects are aggregated at the level of the cohort family rather than the publication, because
+several publications share participants. The twelve families are: Berkeley Aging Cohort Study
+(\citealp{mander2015}; \citealp{winer2019}; \citealp{winer2020}); Age-Well/IMAP, Caen
+(\citealp{champetier2024}; \citealp{montagne2026}); A4 screening
+(\citealp{winer2021}; \citealp{insel2021}); AIBL (\citealp{brown2016}; \citealp{pivac2024});
+Mayo Clinic Study of Aging \citep{carvalho2024}; MARS \citep{jin2025}; BLSA
+\citep{spira2013}; NYU-Barcelona \citep{stankeviciute2024}; Rome Tor Vergata
+\citep{liguori2020}; NYU \citep{varga2016}; Washington University \citep{ju2017}; and the
+single-channel EEG cohort of \citet{lucey2019}. Berkeley alone contributes 13 of the 49
+extracted effects, which is why naive per-effect pooling would overstate precision by roughly
+$\sqrt{3}$ in the spectral stratum.

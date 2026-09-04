@@ -1,0 +1,80 @@
+\section{Introduction}
+\label{sec:intro}
+
+Sleep is one of very few \emph{modifiable} candidate risk factors for Alzheimer's disease, and
+the glymphatic hypothesis gives it a concrete mechanism. Slow waves drive macroscopic
+cerebrospinal-fluid pulsation in humans \citep{fultz2019}, that flow clears interstitial
+amyloid-beta in mice \citep{xie2013}, and so chronically reduced slow-wave sleep should permit
+amyloid to accumulate. The chain is repeated in reviews, in press coverage, and --- most
+consequentially --- in the design of acoustic-stimulation and behavioural sleep trials that
+treat N3 sleep duration as the actionable target. If the human evidence for the \emph{stage}
+metric is weaker than the narrative implies, those trials are being powered and targeted on an
+effect that may not exist at the claimed size.
+
+\para{The hypothesis is a conjunction of three claims.} As usually stated, reduced slow-wave
+sleep duration shows a dose-dependent association with higher amyloid burden in cognitively
+normal adults, each 10\% reduction in N3 percentage is associated with a measurable increase in
+amyloid PET SUVR, and this relationship is stronger than the associations with total sleep time
+or sleep efficiency alone. Clause (i) is an association claim, clause (ii) a dose claim in
+physical units, and clause (iii) a comparative claim. Each is separately testable, and the
+hypothesis is supported only if all three hold.
+
+\para{None of the three has ever been tested meta-analytically.} From 54 full-text papers we
+find four gaps, and every one is load-bearing. First, no meta-analysis has pooled a
+slow-wave-specific exposure against amyloid PET: the largest and most recent synthesis
+\citep{chen2025} pooled only sleep \emph{quality} and \emph{duration} across 30 studies and
+14{,}997 subjects, while \citet{cui2022} and \citet{bubu2020} covered obstructive sleep apnea.
+Second, ``slow-wave sleep'' silently names two different measurements. In the one dataset that
+reports both in the same 32 participants, spectral $<$1\,Hz slow-wave activity predicted amyloid
+accumulation at $r = -0.52$ while N3 \emph{stage} duration was null at $r = -0.07$
+\citep{winer2020}; any estimate that merges them is uninterpretable. Third, cohort
+non-independence is unhandled: \citet{mander2015}, \citet{winer2019} and \citet{winer2020} are
+all the Berkeley Aging Cohort Study with overlapping participants, contributing 13 of our 49
+extracted effects. Fourth, and least appreciated, differential measurement reliability has
+never been tested as a competing explanation for why one sleep metric correlates more strongly
+than another.
+
+\para{Our approach.} We assemble 49 hand-extracted effect sizes from 17 studies across 12
+independent cohort families, each carrying a verified DOI/PMID, a verbatim provenance quote, and
+a sign convention in which \emph{positive means worse sleep is associated with more amyloid}.
+We pool the 40 amyloid-PET effects on the Fisher-$z$ scale in four preregistered strata ---
+\stage, \spectral, \tst and \se{} --- aggregating to one synthetic effect per cohort family
+before fitting REML random effects with Knapp--Hartung--Sidik--Jonkman standard errors. We then
+test the comparative claim as a \emph{within-study paired difference} using only cohorts that
+report both exposures in the same participants, build a measurement-reliability null model from
+empirical single-night ICCs, and convert the pooled estimate into SUVR and Centiloid units
+(\figref{fig:forest} through \figref{fig:robust}).
+
+\para{What we find.} The exposure the hypothesis names is the weakest of the four:
+$r = +0.026$ (95\% CI $-0.153$ to $+0.203$, $p = 0.68$) with $I^2 = 0\%$, against $r = +0.163$
+for total sleep time and $r = +0.090$ for sleep efficiency. Equivalence testing rejects a true
+correlation as large as $r = 0.20$ ($p_{\mathrm{TOST}} = 0.026$). The dose statement converts to
+$\Delta\mathrm{SUVR} = +0.005$ per 10 \pp of N3, $1.8\%$ of the amyloid-negative/positive
+separation. Measurement error cannot rescue the comparative claim: single-night polysomnography
+measures N3\% far more reliably (ICC $0.775$) than total sleep time (ICC $0.225$), so identical
+true effects would still make N3 look $1.86\times$ stronger --- the observed ratio is
+$0.16\times$, about eleven times below the measurement-only prediction. Finally, the positive
+spectral literature is one cohort family: pooled $r = +0.112$ across three families
+($I^2 = 77\%$) drops to $r = -0.025$ when Berkeley is removed.
+
+\para{Contributions.}
+\begin{itemize}[leftmargin=*,itemsep=1pt,topsep=2pt]
+    \item We provide the first meta-analytic estimate of the N3-stage/amyloid-PET association,
+    kept strictly separate from spectral slow-wave activity and with variance handled at the
+    level of the cohort family rather than the publication.
+    \item We test the specificity claim as a within-study paired contrast, using only cohorts
+    that measure both exposures in the same participants, which removes between-cohort
+    confounding from the exact comparison the hypothesis makes.
+    \item We introduce a quantitative measurement-reliability null model from empirical
+    single-night ICCs, turning ``metric A correlates more strongly than metric B'' into a
+    testable excess over what measurement precision alone predicts.
+    \item We estimate the hypothesis's own dose statement in SUVR and Centiloid units, and show
+    with population N3 distributions that the stated 10-percentage-point contrast is not
+    available to 78\% of the target population.
+\end{itemize}
+
+\Secref{sec:related} positions this work against the mechanistic, observational and
+meta-analytic literature; \secref{sec:method} gives the harmonisation, dependency handling and
+six preregistered analyses; \secref{sec:results} reports them; \secref{sec:discussion} states
+the verdict on each clause, what the reliability model adds, and the limits of a study-level
+design.

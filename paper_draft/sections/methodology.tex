@@ -1,0 +1,157 @@
+\section{Methodology}
+\label{sec:method}
+
+\subsection{The hypothesis, decomposed into testable clauses}
+\label{sec:clauses}
+
+We preregistered the hypothesis as a conjunction and fixed a refutation criterion for each
+clause before fitting any model (\tabref{tab:clauses}). Clause (i) is tested by the pooled
+association and, if null, by equivalence testing; clause (ii) by conversion to
+$\Delta\mathrm{SUVR}$ per 10 \pp of N3; clause (iii) by within-study paired contrasts that must
+additionally survive a measurement-reliability null model. A negative result on any clause is
+reported as the finding.
+
+\input{tables/clauses}
+
+\subsection{Corpus and analysis set}
+\label{sec:data}
+
+The primary input is a curated table of 49 effect sizes hand-extracted from 17 studies across 12
+independent cohort families. Every row carries a verified DOI or PMID, a verbatim provenance
+quote from the source paper, a \texttt{cohort\_family} label used for dependency handling, and a
+\emph{burden-aligned} effect signed so that \textbf{positive means worse sleep is associated
+with more amyloid}. Positive therefore always supports the hypothesis, regardless of how the
+original paper oriented its exposure.
+
+The primary analysis set is the 40 usable effects whose outcome is amyloid PET burden
+(cross-sectional deposition or change). The nine CSF amyloid-beta42 effects are excluded from
+the primary model and analysed only as a cognitive-status-stratified secondary, because the sign
+of soluble CSF amyloid-beta42 relative to deposited burden reverses between pre-deposition
+samples \citep{varga2016} and post-deposition samples \citep{liguori2020}.
+
+Three supporting datasets do the work the primary table cannot. Single-night ICC(2,1) values per
+sleep metric come from \sleepedf \citep{kemp2000}, computed on 75 subjects with two consecutive
+nights each, and feed the reliability null model. Subject-level N3 percentages from the same
+source (153 recordings, 78 subjects) give the exposure dispersion for the dose conversion and
+the feasibility check. Amyloid SUVR/Centiloid anchors come from \citet{jack2017}, and
+\citet{chen2025} serves as an external benchmark for the pooled comparator estimates.
+
+\subsection{Effect harmonisation}
+\label{sec:harmonise}
+
+Everything is pooled on the Fisher-$z$ scale \citep{fisher1915},
+$z = \operatorname{artanh}(r)$ with $v = 1/(n-3)$. Kendall's $\tau$ is converted through
+Greiner's relation $r = \sin(\pi\tau/2)$ \citep{kendall1949}. \Tabref{tab:conversion} lists the conversion rule applied to each input type and
+how many amyloid-PET effects it covers.
+
+\input{tables/conversion}
+
+\para{Test-statistic recovery.} The step that makes this analysis possible is the recovery of a
+partial correlation from a reported regression coefficient and its $p$-value
+\citep{rosenthal1979}. For a two-sided $p$ on $\mathrm{df} = n - 1 - n_{\mathrm{cov}}$ residual
+degrees of freedom,
+\begin{equation}
+t = \operatorname{sign}(\beta)\, F^{-1}\!\left(1 - \tfrac{p}{2};\, \mathrm{df}\right),
+\qquad
+r = \frac{t}{\sqrt{t^{2} + \mathrm{df}}}.
+\label{eq:recovery}
+\end{equation}
+Raw betas are never pooled in their native units. Recovery brings the two largest cohorts
+(\afour, $n = 4{,}417$; \aibl, $n = 189$) and the \mayo and \mars results onto the common
+metric, raising the usable amyloid-PET set from 21 native correlations to 40 effects. The
+conversion is exact where it can be checked: recovering $r$ from the $p$-value of a simple
+correlation returns the original $r$ to within $10^{-8}$.
+
+\para{Reported nulls.} Seven amyloid-PET effects are narrative nulls --- statements such as ``no
+association with total sleep time or sleep efficiency'' with no number attached. We impute
+$z = 0$ with $v = 1/(n-3)$. This is conservative in magnitude but anti-conservative in
+precision, so it is carried as the primary rule \emph{and} removed in sensitivity analysis S1.
+Dropping these rows instead would bias every pooled estimate away from zero.
+
+\subsection{Dependency handling and estimation}
+\label{sec:estimation}
+
+Berkeley alone contributes 13 of 49 effects, so treating publications as independent would
+inflate precision. The primary estimator first aggregates to one synthetic effect per cohort
+family per stratum using the correlated-effects variance of \citet{borenstein2009},
+\begin{equation}
+\bar{z} = \frac{1}{m}\sum_{i=1}^{m} z_i,
+\qquad
+\bar{v} = \frac{1}{m^{2}}\left(\sum_{i=1}^{m} v_i + \sum_{i \neq j} \rho \sqrt{v_i v_j}\right),
+\qquad \rho = 0.6,
+\label{eq:borenstein}
+\end{equation}
+and then fits REML random effects \citep{viechtbauer2005} with
+Knapp--Hartung--Sidik--Jonkman standard errors on a $t_{k-1}$ reference distribution
+\citep{knapp2003}, the recommended small-$k$ adjustment. Naive per-effect pooling is reported
+only to quantify how much dependency handling matters, and cluster-robust variance estimation
+\citep{hedges2010} is reported where a stratum has at least four cohort families.
+
+\subsection{The six analyses}
+\label{sec:experiments}
+
+\para{E1: stratified pooling.} Pooled estimates for \stage, \spectral, \tst, \se, \waso and
+other stages, with $\tau^2$, $Q$, $I^2$ and a 95\% prediction interval \citep{higgins2009}.
+Because $k \leq 6$ cohort families per stratum, every primary $p$-value is accompanied by an
+exact sign-flip permutation $p$-value enumerating all $2^k$ assignments.
+
+\para{E2: specificity.} A naive between-stratum comparison is invalid because the strata share
+cohorts. The primary test is therefore a within-study paired difference: for every cohort family
+reporting both exposures in the same participants,
+$\Delta z = z_{\mathrm{N3}} - z_{\mathrm{comparator}}$ with
+$\operatorname{Var}(\Delta z) = v_a + v_b - 2\rho_w\sqrt{v_a v_b}$ and $\rho_w = 0.5$. Three
+preregistered confirmatory contrasts (stage vs.\ \tst, stage vs.\ \se, stage vs.\ \spectral)
+carry a Holm correction \citep{holm1979}.
+
+\para{E3: measurement-reliability null model.} Classical attenuation gives
+$r_{\mathrm{obs}} = r_{\mathrm{true}}\sqrt{\mathrm{ICC}_{\mathrm{exposure}}}
+\sqrt{\mathrm{ICC}_{\mathrm{outcome}}}$. In a within-outcome comparison the outcome term
+cancels, so if two exposures had \emph{identical} true correlations with amyloid their observed
+correlations would still stand in the ratio
+$\sqrt{\mathrm{ICC}_a / \mathrm{ICC}_b}$. We compute that predicted ratio from the empirical
+single-night ICCs and compare it to the observed ratio, and we also report each stratum
+disattenuated for its own unreliability.
+
+\para{E4: dose conversion and feasibility.} We convert the pooled correlation into the units the
+hypothesis states,
+\begin{equation}
+\Delta\mathrm{amyloid} \text{ per } 10\,\mathrm{pp\ N3}
+= r_{\mathrm{pooled}} \times \frac{10}{\mathrm{SD}_{\mathrm{N3\%}}}
+\times \mathrm{SD}_{\mathrm{amyloid}},
+\label{eq:dose}
+\end{equation}
+propagating all three inputs by Monte Carlo (10{,}000 draws): $r$ via a $t_{k-1}$ draw on the
+Fisher-$z$ scale, $\mathrm{SD}_{\mathrm{N3\%}}$ via the $\chi^2$ sampling distribution of an SD,
+and $\mathrm{SD}_{\mathrm{amyloid}}$ via a $\mathrm{Beta}(30,70)$ prior on amyloid-positive
+prevalence applied to the medians and IQRs of \citet{jack2017}. We then ask whether a
+10-percentage-point reduction in N3 is an available exposure contrast at all, using the observed
+N3 distribution in \sleepedf subjects aged 60 and over.
+
+\para{E5: robustness and bias.} Seventeen preregistered specifications: dropping imputed nulls
+(S1), dropping $p$-recovered betas (S2), both (S1+S2), alternative residual-df rules (S3),
+$\rho \in \{0.3, 0.8, 1.0\}$ (S4), cognitively normal samples only (S5), PSG-measured exposures
+only (S6), leave-one-cohort-family-out (S7), fixed effects (S8), and the CSF secondary (S10).
+Small-study bias by Egger regression \citep{egger1997} and Duval--Tweedie trim-and-fill
+\citep{duval2000}, labelled uninterpretable below $k = 5$ and $k = 10$ respectively.
+
+\para{E6: precision.} Minimum detectable effect at 80\% power per stratum, power at
+$r \in \{0.20, 0.30, 0.45\}$, and equivalence testing \citep{lakens2017} of the \stage stratum
+against bounds $r = \pm 0.10, 0.15, 0.20, 0.30, 0.45$. An honest negative result must state what
+it could and could not have detected.
+
+\subsection{Implementation and reproducibility}
+\label{sec:impl}
+
+Python 3.12.8 with numpy 2.5.2, pandas 3.0.5, scipy 1.18.1, statsmodels 0.15.0 and pymare
+0.0.12, in an isolated \texttt{uv} environment with pinned dependencies. Seed 42 throughout;
+the only stochastic step is the E4 Monte Carlo. The full pipeline runs in about 29 seconds on
+CPU. GPUs were available but not used: this is a study-level meta-analysis whose entire compute
+cost is trivial, so acceleration would add complexity with no benefit.
+
+The meta-analytic primitives (REML $\tau^2$, HKSJ, cluster-robust variance, exact permutation,
+trim-and-fill, TOST) are implemented directly from their primary formulations rather than taken
+from a package, because no available Python package provides HKSJ, cluster-robust variance and
+exact permutation together. They are cross-checked against PyMARE, an independently maintained
+meta-analysis package: REML point estimates agree to within $4.4 \times 10^{-9}$ on all four
+strata. Validation re-runs the entire pipeline in a scratch copy and confirms all eight result
+files are bit-identical; 39 of 39 validation checks pass.

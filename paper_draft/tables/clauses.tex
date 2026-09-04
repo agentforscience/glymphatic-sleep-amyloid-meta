@@ -1,0 +1,26 @@
+\begin{table}[t]
+    \centering
+    \small
+    \begin{tabular}{@{}cp{2.9cm}p{3.5cm}p{4.5cm}@{}}
+        \toprule
+        \textbf{Clause} & \textbf{Claim} & \textbf{Supported if} & \textbf{Refuted if} \\
+        \midrule
+        (i)   & N3 stage \% is associated with amyloid PET burden
+              & pooled $r > 0$ with 95\% CI excluding 0
+              & CI includes 0 \emph{and} excludes $r \geq 0.20$ (TOST) \\
+        (ii)  & the association is dose-dependent and measurable in SUVR
+              & $\Delta\mathrm{SUVR}$ per 10 \pp CI excludes 0 and is a non-trivial fraction of
+                the A$-$/A$+$ separation
+              & CI includes 0, \emph{or} magnitude $< \sim$5\% of the A$-$/A$+$ SUVR gap \\
+        (iii) & it is \emph{stronger} than \tst and \se
+              & paired $\Delta z > 0$ with CI excluding 0 \emph{and} the excess survives the
+                reliability null
+              & $\Delta z \leq 0$, \emph{or} any positive gap is fully explained by differential
+                ICC \\
+        \bottomrule
+    \end{tabular}
+    \caption{The hypothesis decomposed into three preregistered clauses with their refutation
+    criteria, fixed before any model was fitted. The hypothesis is a conjunction: it is
+    supported only if all three clauses hold.}
+    \label{tab:clauses}
+\end{table}

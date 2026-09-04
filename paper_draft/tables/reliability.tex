@@ -1,0 +1,44 @@
+\begin{table}[t]
+    \centering
+    \small
+    \begin{minipage}[t]{0.47\textwidth}
+    \centering
+    \textbf{(a) Single-night reliability and disattenuation}\\[2pt]
+    \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+\begin{tabular}{@{}lccc@{}}
+        \toprule
+        \textbf{Metric} & \textbf{ICC(2,1)} & \textbf{obs.\ $r$} & \textbf{true $r$} \\
+        \midrule
+        \stage & $\mathbf{0.775}$ & $+0.026$ & $\mathbf{+0.029}$ \\
+        \se    & $0.562$ & $+0.090$ & $+0.109$ \\
+        \waso  & $0.517$ & $+0.109$ & $+0.144$ \\
+        \tst   & $\mathbf{0.225}$ & $+0.163$ & $\mathbf{+0.228}$ \\
+        \bottomrule
+    \end{tabular}%
+}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.44\textwidth}
+    \centering
+    \textbf{(b) The measurement-only prediction}\\[2pt]
+    \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+\begin{tabular}{@{}lccc@{}}
+        \toprule
+        \textbf{Ratio} & \textbf{predicted} & \textbf{observed} & \textbf{obs./pred.} \\
+        \midrule
+        \stage $\div$ \tst & $\mathbf{1.86\times}$ & $\mathbf{0.16\times}$ & $0.09$ \\
+        \stage $\div$ \se  & $1.17\times$ & $0.29\times$ & $0.25$ \\
+        \bottomrule
+    \end{tabular}%
+}
+    \end{minipage}
+    \caption{E3: could differential measurement reliability explain the ordering? No --- it
+    predicts the opposite. \textit{(a)} ICC(2,1) from 75 \sleepedf subjects with two consecutive
+    nights; disattenuated (``true'') $r$ divides the observed $r$ by $\sqrt{\mathrm{ICC}}$.
+    Correcting for unreliability \emph{widens} the gap against \stage
+    ($+0.029$ vs.\ $+0.228$). \textit{(b)} If \stage and its comparator had identical true
+    correlations with amyloid, measurement error alone would still make the observed \stage
+    correlation $1.86\times$ larger than \tst's. The observed ratio is about eleven times
+    smaller than that prediction.}
+    \label{tab:reliability}
+\end{table}

@@ -1,0 +1,40 @@
+\begin{table}[t]
+    \centering
+    \small
+    \begin{minipage}[t]{0.51\textwidth}
+    \centering
+    \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+\begin{tabular}{@{}lcccc@{}}
+        \toprule
+        \textbf{Contrast} & \textbf{shared} & \textbf{$\Delta z$} & \textbf{95\% CI} & \textbf{Holm $p$} \\
+        \midrule
+        \stage $-$ \tst      & 3 & $\mathbf{-0.147}$ & $[-0.651, +0.357]$ & 1.00 \\
+        \stage $-$ \se       & 3 & $\mathbf{-0.049}$ & $[-0.490, +0.392]$ & 1.00 \\
+        \stage $-$ \spectral & 2 & $\mathbf{-0.177}$ & $[-2.743, +2.389]$ & 1.00 \\
+        \bottomrule
+    \end{tabular}%
+}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.38\textwidth}
+    \centering
+    \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+\begin{tabular}{@{}lccc@{}}
+        \toprule
+        \textbf{Cohort family} & \textbf{$r_{\mathrm{N3}}$} & \textbf{$r_{\mathrm{TST}}$} & \textbf{$\Delta z$} \\
+        \midrule
+        \agewell \citep{montagne2026} & 0.000 & 0.255 & $-0.261$ \\
+        \berkeley \citep{winer2020}   & 0.070 & 0.360 & $-0.307$ \\
+        \mars \citep{jin2025}         & 0.039 & 0.000 & $+0.039$ \\
+        \bottomrule
+    \end{tabular}%
+}
+    \end{minipage}
+    \caption{E2: the specificity claim (clause iii), tested as a within-study paired difference
+    so that only cohorts measuring both exposures in the same participants contribute.
+    \textit{Left:} all three point estimates are \emph{negative} --- \stage is weaker than every
+    comparator, the direction opposite to the hypothesis --- though none is individually
+    significant and none survives Holm correction. \textit{Right:} per-cohort detail for the
+    primary contrast; two of three cohorts favour \tst.}
+    \label{tab:specificity}
+\end{table}

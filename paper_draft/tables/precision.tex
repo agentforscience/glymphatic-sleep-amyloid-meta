@@ -1,0 +1,47 @@
+\begin{table}[t]
+    \centering
+    \small
+    \begin{minipage}[t]{0.52\textwidth}
+    \centering
+    \textbf{(a) What could each stratum have detected?}\\[2pt]
+    \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+\begin{tabular}{@{}lcccc@{}}
+        \toprule
+        \textbf{Stratum} & \textbf{cohorts} & \textbf{MDE $r$} & \textbf{pow.\ $r{=}0.30$} & \textbf{pow.\ $r{=}0.45$} \\
+        \midrule
+        \stage    & 4 & $\mathbf{0.157}$ & 1.00 & 1.00 \\
+        \spectral & 3 & $0.417$ & 0.50 & 0.86 \\
+        \tst      & 6 & $0.180$ & 1.00 & 1.00 \\
+        \se       & 4 & $0.153$ & 1.00 & 1.00 \\
+        \bottomrule
+    \end{tabular}%
+}
+    \end{minipage}
+    \hfill
+    \hfill
+    \begin{minipage}[t]{0.40\textwidth}
+    \centering
+    \textbf{(b) Equivalence tests on \stage}\\[2pt]
+    \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+\begin{tabular}{@{}lcc@{}}
+        \toprule
+        \textbf{Bound} & \textbf{$p_{\mathrm{TOST}}$} & \textbf{conclusion} \\
+        \midrule
+        $r = 0.10$ & 0.140 & not rejected \\
+        $r = 0.15$ & 0.057 & not rejected \\
+        $r = 0.20$ & $\mathbf{0.026}$ & \textbf{rejected} \\
+        $r = 0.30$ & $\mathbf{0.008}$ & \textbf{rejected} \\
+        $r = 0.45$ & $\mathbf{0.002}$ & \textbf{rejected} \\
+        \bottomrule
+    \end{tabular}%
+}
+    \end{minipage}
+    \caption{E6: precision. \textit{(a)} Minimum detectable effect at 80\% power, computed at the
+    cohort-aggregated variances and the estimated $\tau^2$. \spectral is the one stratum too
+    imprecise to support a conclusion in either direction. \textit{(b)} Equivalence testing
+    converts ``no evidence of an effect'' into evidence of no meaningful effect: the data are
+    inconsistent with a true \stage/amyloid correlation as large as $r = 0.20$, and \emph{a
+    fortiori} with the $r \approx 0.45$ effects reported for spectral slow-wave activity. They
+    cannot rule out a genuinely small effect of $r \approx 0.10$--$0.15$.}
+    \label{tab:precision}
+\end{table}

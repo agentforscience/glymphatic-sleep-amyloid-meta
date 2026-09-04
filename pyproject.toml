@@ -1,0 +1,23 @@
+[project]
+name = "research-workspace"
+version = "0.1.0"
+description = "Research workspace for experiments"
+requires-python = ">=3.10"
+dependencies = [
+    "beautifulsoup4>=4.15.0",
+    "httpx>=0.28.1",
+    "lxml>=6.1.3",
+    "matplotlib>=3.10.9",
+    "numpy>=2.2.6",
+    "pandas>=2.3.3",
+    "pymare>=0.0.12",
+    "pypdf>=6.17.0",
+    "reportlab>=5.0.1",
+    "requests>=2.34.2",
+    "scipy>=1.15.3",
+    "statsmodels>=0.15.0",
+    "xlrd>=2.0.2",
+]
+
+[tool.uv]
+package = false

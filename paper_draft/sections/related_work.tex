@@ -1,0 +1,77 @@
+\section{Related Work}
+\label{sec:related}
+
+\para{Mechanism: why anyone expects an effect.} \citet{xie2013} showed that convective
+interstitial-fluid exchange increases during natural sleep and anaesthesia in mice, with a
+roughly 60\% increase in interstitial space and faster clearance of exogenous amyloid-beta.
+\citet{fultz2019} supplied the human counterpart: during NREM sleep, coupled
+electrophysiological, haemodynamic and CSF oscillations produce large macroscopic CSF flow
+pulsations locked to slow-wave activity. \citet{holth2019} extended the same logic to tau, and
+\citet{rasmussen2018} review the pathway across neurological disease. The closest thing to a
+human experiment is \citet{ju2017}: in 17 adults, acoustic disruption of slow-wave activity
+raised CSF amyloid-beta40 ($r = 0.610$, $p = 0.009$), and the authors report the effect as
+specific to slow-wave activity rather than to sleep duration or efficiency. Unlike that work,
+which measures the acute overnight production/clearance balance in soluble CSF, we ask whether
+chronically lower slow-wave sleep is visible in \emph{deposited} plaque on PET.
+
+\para{Spectral slow-wave activity and amyloid.} \citet{mander2015} reported that the proportion
+of medial-prefrontal NREM slow-wave activity in the 0.6--1\,Hz band correlated with mPFC PiB DVR
+at $r = -0.45$, with the effect frequency-specific: the 1--4\,Hz band trended the other way.
+\citet{winer2019} replicated this at $r = -0.36$ (rising to $-0.43$ adjusted), and
+\citet{winer2020} showed prospectively that baseline $<$1\,Hz slow-wave activity predicted the
+rate of subsequent cortical amyloid accumulation at $r = -0.52$. All three draw on the Berkeley
+Aging Cohort Study with overlapping participants. Two independent attempts did not reproduce
+the finding: \citet{champetier2024} decomposed delta into sub-bands in 127 cognitively
+unimpaired adults and found no association with amyloid at baseline or with accumulation, and
+\citet{carvalho2024} found slow-oscillation relative power \emph{increased} annualised PiB
+accumulation in older adults with apnea. \citet{lucey2019} report the inverse relation most
+strongly for tau rather than amyloid, and \citet{zavecz2023} reframe slow-wave activity as a
+cognitive-reserve factor that moderates the effect of amyloid on memory rather than predicting
+amyloid level itself. Building on this literature, we do not merge these
+effects with stage-level ones, and we quantify how much of the pooled spectral estimate rests
+on a single cohort family.
+
+\para{Stage-level slow-wave sleep.} The metric the hypothesis actually names --- N3 stage
+duration or percentage --- has a much flatter record. \citet{montagne2026} found N3\% did not
+differ by amyloid status in 76 cognitively unimpaired adults ($\eta_p^2 = 0.003$, $p = 0.628$)
+while total sleep time did ($\eta_p^2 = 0.065$, $p = 0.031$). \citet{jin2025} found slow-wave
+sleep tertiles null against amyloid PET in fully adjusted models, with REM latency rather than
+slow-wave sleep carrying the association. \citet{stankeviciute2024} tie decreased slow-wave
+sleep to tau rather than amyloid and report the associations as amyloid-independent.
+\citet{varga2016} and \citet{liguori2020} use CSF amyloid-beta42 rather than PET, and their
+signs relative to deposited burden are opposite because their samples sit on opposite sides of
+deposition. We treat CSF as a cognitive-status-stratified secondary rather than pooling it with
+PET.
+
+\para{Duration and efficiency: the comparators the hypothesis must beat.} \citet{winer2021}
+found shorter self-reported sleep associated with higher amyloid in 4{,}417 A4 screening
+participants; \citet{spira2013} reported the same direction in the BLSA neuroimaging substudy;
+\citet{insel2021} found null global effects in A4 with regional effects only for daytime sleep;
+\citet{pivac2024} linked low sleep efficiency to faster accumulation in AIBL; \citet{brown2016}
+found only sleep latency significant among PSQI components; and \citet{fenton2023} found
+actigraphic \emph{variability} in efficiency and duration predicted burden. These are the
+field's de-facto comparators, and clause (iii) of the hypothesis is precisely the claim that
+slow-wave sleep beats them.
+
+\para{Prior meta-analyses.} \citet{chen2025} is the largest synthesis to date and pools poor
+sleep quality against amyloid PET at Fisher $z = 0.153$ ($k = 9$, $I^2 = 99\%$).
+\citet{bubu2019} and \citet{bubu2020} cover apnea and longitudinal biomarker change, and
+\citet{cui2022} meta-analyses AD biomarkers in apnea. None pools a slow-wave-specific exposure.
+We also note a metric defect in the benchmark: \citet{chen2025} report ``Fisher $z = -0.002$,
+95\% CI $-0.003$ to $-0.001$'' for sleep duration against amyloid PET, which are raw
+regression-coefficient units labelled as Fisher $z$; a pooled correlation of $-0.002$ with that
+interval is not a credible common metric. Our pipeline converts every input to a genuinely
+common metric before pooling, and we report the conversion rule for each effect.
+
+\para{Measurement and reference scales.} Night-to-night variability in sleep-stage measurement
+is well documented \citep{levendowski2017}, as are the limits of inter-scorer agreement
+\citep{nikkonen2024}, but no paper in our corpus asks whether metric-to-metric differences in
+\emph{observed} correlation strength follow from metric-to-metric differences in single-night
+reliability. We make that question quantitative. For unit conversion we use the amyloid PET
+reference distributions and the 1.42\,SUVR / 19\,Centiloid positivity threshold of
+\citet{jack2017}, with \citet{hanseeuw2021} for progression anchors, and we take single-night
+reliabilities from \sleepedf \citep{kemp2000}. Our meta-analytic machinery follows
+\citet{viechtbauer2005} for REML, \citet{knapp2003} for small-sample standard errors,
+\citet{higgins2009} for prediction intervals, \citet{borenstein2009} for correlated-effects
+aggregation, \citet{hedges2010} for cluster-robust variance, \citet{egger1997} and
+\citet{duval2000} for small-study bias, and \citet{lakens2017} for equivalence testing.
